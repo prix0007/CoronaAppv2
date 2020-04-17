@@ -23,13 +23,10 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
 
             }
-
             public void onFinish() {
                 // Here do what you like...
-                Intent intent = new Intent(context, page2.class);
+                Intent intent = new Intent(context, Login.class);
                 startActivity(intent);
             }
         }.start();
-
-
 }}

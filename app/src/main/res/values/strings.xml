@@ -20,8 +20,11 @@
         <item>Civil Servant</item>
         <item>Police</item>
         <item>Others</item>
-
-
+    </string-array>
+    <string-array name="roles">
+        <item>User</item>
+        <item>Volunteer</item>
+        <item>Authority</item>
     </string-array>
 
 
