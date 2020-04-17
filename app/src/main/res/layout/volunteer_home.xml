@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".VolunteerHome">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="392dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginRight="9dp"
+        android:background="@drawable/block"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView333"
+        android:layout_width="403dp"
+        android:layout_height="76dp"
+
+        android:layout_marginTop="1dp"
+        android:background="@null"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center_horizontal"
+        android:text="VOLUNTEER"
+        android:textColor="#ffffff"
+        android:textSize="65sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginTop="661dp"
+        app:itemBackground="@color/colorPrimaryDark"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.991"
+        app:menu="@menu/menu_navigation"
+        tools:layout_editor_absoluteX="2dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="408dp"
+        android:layout_height="39dp"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center_horizontal"
+        android:paddingLeft="15sp"
+        android:paddingRight="15sp"
+        android:text="“The smallest act of kindness is worth more than the grandest intention.” "
+        android:textColor="#084E84"
+        android:textSize="15sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="209dp"
+        android:layout_height="276dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:srcCompat="@drawable/donate" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:text="Join the war against COVID-19"
+        android:textAlignment="center"
+        android:textColor="#FFFEFE"
+        android:textSize="9sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView5"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="center_horizontal"
+        android:text="~Oscar Wilde"
+        android:textColor="#084E84"
+        android:textStyle="bold|italic"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="329dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView33"
+        app:srcCompat="@drawable/butt2" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="330dp"
+        android:layout_height="142dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:text="COVID-19 is an unfamiliar foe that’s reshaping our daily routines. This upheavel has rendered many people helpess.To help such people, many organizations have been setup. Extend your hand to such organizations by volunteering for work that suits you."
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        tools:ignore="RtlCompat" />
+
+    <ImageView
+        android:id="@+id/no"
+        android:layout_width="152dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="onNo"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/butt1" />
+
+    <ImageView
+        android:id="@+id/yes"
+        android:layout_width="157dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="84dp"
+        android:onClick="onYes"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/butt3" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="149dp"
+        android:layout_height="41dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:onClick="onYes"
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:text="Contribute"
+        android:textAlignment="center"
+
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/yes"
+        app:layout_constraintEnd_toEndOf="@+id/yes"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="@+id/yes"
+        app:layout_constraintTop_toTopOf="@+id/yes"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:fontFamily="sans-serif-condensed"
+
+        android:gravity="center"
+        android:onClick="onNo"
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:text="Go Back"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/no"
+        app:layout_constraintEnd_toEndOf="@+id/no"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="@+id/no"
+        tools:ignore="RtlCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

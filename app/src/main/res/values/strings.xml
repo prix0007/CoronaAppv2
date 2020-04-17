@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">COWAR</string>
+    <string name="title_activity_user_nav">user_nav</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Name</string>
+    <string name="nav_header_subtitle">abc@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Symptoms Check</string>
+    <string name="menu_sym">Map</string>
+    <string name="menu_map">Contribute</string>
+
+    <string name="home_second">Home Second</string>
+    <string-array name="occ">
+        <item>Select</item>
+        <item>Doctor</item>
+        <item>Medical Staff</item>
+        <item>Civil Servant</item>
+        <item>Police</item>
+        <item>Others</item>
+
+
+    </string-array>
+
+
+</resources>

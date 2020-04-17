@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#ffffff"
+    tools:context=".VolunteerStats">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginTop="661dp"
+        app:itemBackground="@color/colorPrimaryDark"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu_navigation"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="675dp"
+        android:gravity="center_horizontal"
+        android:text="Statistics"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/no"
+        android:layout_width="152dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/butt1" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="128dp"
+        android:layout_height="45dp"
+        android:fontFamily="sans-serif-condensed"
+
+        android:gravity="center"
+
+        android:paddingLeft="25sp"
+        android:paddingRight="25sp"
+        android:text="Refresh"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/no"
+        app:layout_constraintEnd_toEndOf="@+id/no"
+        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintStart_toStartOf="@+id/no"
+        tools:ignore="RtlCompat" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="703dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="23dp" />
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="486dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="97dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/no"
+        app:layout_constraintVertical_bias="0.238">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="310dp"
+                android:layout_height="31dp"
+                android:gravity="center_horizontal"
+                android:text="Stats will be displayed here"
+                tools:layout_editor_absoluteX="48dp"
+                tools:layout_editor_absoluteY="32dp" />
+
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="61dp"
+                android:layout_marginBottom="159dp"
+                android:gravity="center_horizontal"
+                android:text="Total Cases"
+                android:textColor="#0E0D0D"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="176dp" />
+
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="97dp"
+                android:layout_marginBottom="99dp"
+                android:gravity="center_horizontal"
+                android:padding="8sp"
+                android:text="0"
+                android:textColor="#2D2323"
+                android:textSize="23sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="63dp" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="410dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="162dp"
+                android:layout_marginBottom="45dp"
+                android:gravity="center_horizontal"
+                android:text="Confirmed Cases"
+                android:textColor="#0C0C0C"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="203dp"
+                android:gravity="center_horizontal"
+                android:padding="8sp"
+                android:text="0"
+                android:textColor="#272424"
+                android:textSize="23sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="176dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
