@@ -50,7 +50,6 @@ public class VolunteerProfile extends AppCompatActivity {
     }
     public void signO (View view)
     {
-        Intent vl=new Intent(getApplicationContext(),VolunteerLogin.class);
-        startActivity(vl);
+       finish();
     }
 }

@@ -1,6 +1,5 @@
 package com.example.project.ui.home;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,15 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProviders;
 
-import com.example.project.Login;
 import com.example.project.R;
-import com.example.project.RegisterActivity;
 import com.example.project.Sympnext;
-import com.example.project.page2;
 
 public class HomeFragment extends Fragment {
 
