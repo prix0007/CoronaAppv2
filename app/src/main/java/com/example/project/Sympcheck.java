@@ -23,13 +23,8 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 h.setBackgroundColor(getResources().getColor(R.color.change));
-
             }
         });
-
-
-
-
 
         final Button f = (Button) findViewById( R.id.fever );
         f.setOnClickListener(new View.OnClickListener() {
@@ -39,12 +34,8 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 f.setBackgroundColor(getResources().getColor(R.color.change));
-
             }
         });
-
-
-
 
         final Button c = (Button) findViewById( R.id.cough );
         c.setOnClickListener(new View.OnClickListener() {
@@ -54,10 +45,8 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 c.setBackgroundColor(getResources().getColor(R.color.change));
-
             }
         });
-
 
         final Button b= (Button) findViewById( R.id.breath );
         b.setOnClickListener(new View.OnClickListener() {
@@ -71,10 +60,6 @@ public class Sympcheck extends AppCompatActivity {
             }
         });
 
-
-
-
-
         final Button s= (Button) findViewById( R.id.shaking );
         s.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,8 +72,6 @@ public class Sympcheck extends AppCompatActivity {
             }
         });
 
-
-
         final Button d = (Button) findViewById( R.id.dir );
         d.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,8 +83,6 @@ public class Sympcheck extends AppCompatActivity {
 
             }
         });
-
-
 
         final TextView r = (TextView) findViewById( R.id.textView20);
         r.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +107,7 @@ public class Sympcheck extends AppCompatActivity {
                 total=0;
             }
         });
+
         final TextView check = (TextView) findViewById( R.id.textView27);
         check.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,16 +116,12 @@ public class Sympcheck extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), Sympnext.class);
                     intent.putExtra("total",total);
                     startActivity(intent);
-
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"No Symptom Checked!",Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
-
-
     }
     private void status(int tot){
         ImageView ques = findViewById(R.id.question);
