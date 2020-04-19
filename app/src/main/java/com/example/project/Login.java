@@ -86,7 +86,7 @@ public class Login extends AppCompatActivity {
                                               Intent i = new Intent(getApplicationContext(), Userhome.class);
                                               startActivity(i);
                                           } else if(role.equals("Volunteer")){
-                                              Intent i = new Intent(getApplicationContext(), VolunteerHome.class);
+                                              Intent i = new Intent(getApplicationContext(), HomeVolunteerv2.class);
                                               startActivity(i);
                                           } else if(role.equals("Authority")){
                                               Intent i = new Intent(getApplicationContext(), AuthorityHome.class);

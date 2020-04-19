@@ -11,8 +11,7 @@
 
     <meta-data
         android:name="com.google.android.gms.version"
-        android:value="@integer/google_play_services_version" />
-    <!--          The API key for Google Maps-based APIs. -->
+        android:value="@integer/google_play_services_version" /> <!-- The API key for Google Maps-based APIs. -->
     <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="@string/map_key" />
@@ -25,7 +24,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ForgotPassword"></activity>
+        <activity android:name=".HomeVolunteerv2"></activity>
+        <activity android:name=".ForgotPassword" />
 
         <uses-library android:name="com.google.android.maps" />
         <uses-library
@@ -42,7 +42,7 @@
         <activity
             android:name=".user_nav"
             android:label="@string/title_activity_user_nav"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Login" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Sympnext" />

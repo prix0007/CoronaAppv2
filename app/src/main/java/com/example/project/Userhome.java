@@ -89,7 +89,7 @@ public class Userhome extends AppCompatActivity {
         });
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-
+        fetchLocation();
     }
 
     private void initializeItems(){
@@ -134,8 +134,6 @@ public class Userhome extends AppCompatActivity {
                         })
                         .create()
                         .show();
-
-
             } else {
                 // User denied permission for first time
                 ActivityCompat.requestPermissions(Userhome.this,
@@ -145,8 +143,6 @@ public class Userhome extends AppCompatActivity {
 
             }
         }
-
-
         else {
             //Location permission is granted here for very first time
             fusedLocationClient.getLastLocation()
@@ -185,42 +181,4 @@ public class Userhome extends AppCompatActivity {
             }
         }
     }
-<<<<<<< HEAD
-
-    public void check(View view) {
-        Intent ch=new Intent(getApplicationContext(),Sympcheck.class);
-        startActivity(ch);
-    }
-
-    public void preventhome(View view) {
-        Intent ph=new Intent(getApplicationContext(),Prevent.class);
-        startActivity(ph);
-    }
-
-    public void signout(View view) {
-        Intent sg=new Intent(getApplicationContext(),page2.class);
-        startActivity(sg);
-    }
-    public void ma(View view) {
-        Intent sg=new Intent(getApplicationContext(),Map.class);
-        startActivity(sg);
-    }
-||||||| merged common ancestors
-
-    public void check(View view) {
-        Intent ch=new Intent(getApplicationContext(),Sympcheck.class);
-        startActivity(ch);
-    }
-
-    public void preventhome(View view) {
-        Intent ph=new Intent(getApplicationContext(),Prevent.class);
-        startActivity(ph);
-    }
-
-    public void signout(View view) {
-        Intent sg=new Intent(getApplicationContext(),page2.class);
-        startActivity(sg);
-    }
-=======
->>>>>>> 8a7cc9dcc087fb94411e5135913709f13a71fc34
 }

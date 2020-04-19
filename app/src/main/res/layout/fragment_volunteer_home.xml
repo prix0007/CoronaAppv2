@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/block"
+            android:text="Volunteer"
+            android:textColor="#FFFCFC"
+            android:textSize="36sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:text="“The smallest act of kindness is worth more than the grandest intention.”"
+            android:textAlignment="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="~Oscar Wilde"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="-25dp"
+            />
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="181dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:layout_marginTop="12dp"
+            app:srcCompat="@drawable/donate" />
+
+        <TextView
+            android:layout_marginTop="-25dp"
+            android:layout_width="330dp"
+            android:layout_height="142dp"
+            android:layout_gravity="center_horizontal|top"
+            android:background="@color/design_default_color_on_secondary"
+            android:fontFamily="sans-serif-condensed"
+            android:padding="10dp"
+            android:text="COVID-19 is an unfamiliar foe that’s reshaping our daily routines. This upheavel has rendered many people helpess.To help such people, many organizations have been setup. Extend your hand to such organizations by volunteering for work that suits you."
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <Button
+                android:id="@+id/volunteerContribute"
+                android:layout_width="123dp"
+                android:layout_height="62dp"
+                android:layout_gravity="fill"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:background="#4CAF50"
+                android:text="Contribute"
+                android:textAllCaps="false"
+                android:textColor="#FFFEFE"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/volunteerGoBack"
+                app:layout_constraintHorizontal_bias="0.144"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/volunteerGoBack"
+                android:layout_width="112dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#F44336"
+                android:text="Go back"
+                android:textAllCaps="false"
+                android:textColor="#F1F1F1"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

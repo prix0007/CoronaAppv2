@@ -38,9 +38,6 @@ public class VolunteerHome extends AppCompatActivity {
                         return true;
 
                 }
-
-
-
                 return false;
             }
         });
