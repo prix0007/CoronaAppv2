@@ -25,21 +25,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/next"
-        android:layout_width="383dp"
-        android:layout_height="114dp"
-        android:background="@null"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="center_horizontal"
-        android:hint="STATUS"
-        android:textColor="#ffffff"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/block"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/block"
-        app:layout_constraintVertical_bias="0.666" />
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="383dp"
+            android:layout_height="114dp"
+            android:background="@null"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_horizontal"
+            android:hint="STATUS"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/block"
+            app:layout_constraintEnd_toEndOf="@+id/block"
+            app:layout_constraintStart_toStartOf="@+id/block"
+            app:layout_constraintTop_toTopOf="@+id/block"
+            app:layout_constraintVertical_bias="0.666" />
 
     <ImageView
         android:id="@+id/imageView8"
