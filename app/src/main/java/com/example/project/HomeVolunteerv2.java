@@ -102,7 +102,6 @@ public class HomeVolunteerv2 extends AppCompatActivity {
 
         @Override
         public Fragment createFragment(int position) {
-            Log.d("Position",String.valueOf(position));
             switch (position) {
                 case 0:
                     return new Home();
@@ -111,7 +110,7 @@ public class HomeVolunteerv2 extends AppCompatActivity {
                 case 2:
                     return new Stats();
             }
-            return new Home();
+            return null;
         }
 
         @Override
