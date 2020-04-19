@@ -25,19 +25,19 @@ public class Sympnext extends AppCompatActivity {
         int a = extra.getInt("total");
 
         if(a<=4){
-            String display="Symptoms match near to 25%";
+            String display="Your Symptoms shows that you're healthy and fine. Keep On Social Distancing and Stay Healthy";
             dis.setText( display );
         }
         if((a>4) && (a<=9)){
-            String display="Symptoms match near to 50%";
+            String display="Your Symptoms shows that you are at low risk of being affected. Keep On Social Distancing and Stay Healthy";
             dis.setText( display );
         }
         if((a>9) && (a<=14)){
-            String display="Symptoms match near to 75%";
+            String display="Your Symptoms shows that might affected. Do Consult a Doctor and Keep On Social Distancing and Stay Healthy";
             dis.setText( display );
         }
         if(a>=14){
-            String display="Symptoms match near to 90%";
+            String display="Your Symptoms shows that you have a high posiibility of being affected. Do Consult a Doctor and Keep On Social Distancing";
             dis.setText( display );
         }
 
