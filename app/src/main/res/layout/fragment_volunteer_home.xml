@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout2"
+    android:padding="4dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
@@ -18,8 +19,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/block"
             android:text="Volunteer"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textColor="#FFFCFC"
-            android:textSize="36sp" />
+            android:textSize="65dp" />
 
         <TextView
             android:layout_width="match_parent"
@@ -50,7 +52,7 @@
             android:layout_width="330dp"
             android:layout_height="142dp"
             android:layout_gravity="center_horizontal|top"
-            android:background="@color/design_default_color_on_secondary"
+            android:background="@drawable/butt2"
             android:fontFamily="sans-serif-condensed"
             android:padding="10dp"
             android:text="COVID-19 is an unfamiliar foe that’s reshaping our daily routines. This upheavel has rendered many people helpess.To help such people, many organizations have been setup. Extend your hand to such organizations by volunteering for work that suits you."
@@ -69,7 +71,7 @@
                 android:layout_gravity="fill"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
-                android:background="#4CAF50"
+                android:background="@drawable/butt3"
                 android:text="Contribute"
                 android:textAllCaps="false"
                 android:textColor="#FFFEFE"
@@ -87,7 +89,7 @@
                 android:layout_height="60dp"
                 android:layout_marginEnd="40dp"
                 android:layout_marginRight="40dp"
-                android:background="#F44336"
+                android:background="@drawable/butt1"
                 android:text="Go back"
                 android:textAllCaps="false"
                 android:textColor="#F1F1F1"
