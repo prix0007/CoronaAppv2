@@ -64,8 +64,6 @@ public class Login extends AppCompatActivity {
                         login_btn.setClickable(true);
                         if(task.isSuccessful()){
                             if(firebaseAuth.getCurrentUser().isEmailVerified()){
-                                Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_LONG).show();
-                                resetFields();
                                 DocumentReference documentReference = firebaseFirestore.collection("users").document(firebaseAuth.getCurrentUser().getUid());
                                 documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
                                       @Override
@@ -95,6 +93,9 @@ public class Login extends AppCompatActivity {
                                               Toast.makeText(getApplicationContext(), "No Role Defined for this Account", Toast.LENGTH_LONG).show();
                                               return ;
                                           }
+
+                                          Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_LONG).show();
+                                          resetFields();
                                       }
                                   });
                             } else {
