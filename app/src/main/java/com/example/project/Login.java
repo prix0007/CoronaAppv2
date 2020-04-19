@@ -64,7 +64,7 @@ public class Login extends AppCompatActivity {
                         login_btn.setClickable(true);
                         if(task.isSuccessful()){
                             if(firebaseAuth.getCurrentUser().isEmailVerified()){
-                                Toast.makeText(getApplicationContext(), "Login SuccessFully", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext(), "Login Successfully", Toast.LENGTH_LONG).show();
                                 resetFields();
                                 DocumentReference documentReference = firebaseFirestore.collection("users").document(firebaseAuth.getCurrentUser().getUid());
                                 documentReference.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {

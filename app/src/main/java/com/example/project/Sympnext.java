@@ -25,19 +25,19 @@ public class Sympnext extends AppCompatActivity {
         int a = extra.getInt("total");
 
         if(a<=4){
-            String display="Corona is like Pluto to you!";
+            String display="Symptoms match near to 25%";
             dis.setText( display );
         }
         if((a>4) && (a<=9)){
-            String display="Corona is like Jupiter to you!";
+            String display="Symptoms match near to 50%";
             dis.setText( display );
         }
         if((a>9) && (a<=14)){
-            String display="Corona is like Moon to you!";
+            String display="Symptoms match near to 75%";
             dis.setText( display );
         }
         if(a>=14){
-            String display="Corona is like this app to you!";
+            String display="Symptoms match near to 90%";
             dis.setText( display );
         }
 
