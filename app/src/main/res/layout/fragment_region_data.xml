@@ -11,13 +11,15 @@
     <TextView
         android:id="@+id/regionName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="31dp"
         android:layout_margin="5dp"
+        android:background="@drawable/butt2"
         android:gravity="center_horizontal"
         android:text="Region Name"
+        android:fontFamily="sans-serif-condensed-medium"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#2196F3"
+        android:textColor="#ffffff"
         android:textSize="20sp" />
 
     <LinearLayout

@@ -43,7 +43,7 @@ public class Profile extends Fragment {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.isSuccessful()){
-                    username.setText("Hi There,  \n "+task.getResult().getString("fullname"));
+                    username.setText("Hello "+task.getResult().getString("fullname"));
                 }
             }
         });
@@ -51,7 +51,9 @@ public class Profile extends Fragment {
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                            
                 firebaseAuth.signOut();
+
             }
         });
 

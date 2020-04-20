@@ -17,14 +17,14 @@ import com.example.project.R;
 
 public class Home extends Fragment {
 
-    Button contribute, goBack;
+    Button contribute;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View v = inflater.inflate(R.layout.fragment_volunteer_home, container);
         contribute = v.findViewById(R.id.volunteerContribute);
-        goBack = v.findViewById(R.id.volunteerGoBack);
+
 
         contribute.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,12 +34,7 @@ public class Home extends Fragment {
             }
         });
 
-        goBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(),"Thank you for considering to volunteer.\nLogged Out Successfully.",Toast.LENGTH_SHORT).show();
-            }
-        });
+
         return v;
     }
 }
