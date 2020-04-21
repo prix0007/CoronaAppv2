@@ -52,75 +52,79 @@
 
         <TextView
             android:id="@+id/textView26"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="260dp"
-            android:layout_marginEnd="3dp"
-            android:layout_marginRight="3dp"
+            android:layout_width="213dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="210dp"
             android:background="@drawable/butt3"
             android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:onClick="site1"
-            android:text="AYUSH ORGANISATION"
+            android:text="Ayush Organisation"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="23dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
         <TextView
             android:id="@+id/textView28"
-            android:layout_width="0dp"
-            android:layout_height="33dp"
+            android:layout_width="213dp"
+            android:layout_height="40dp"
             android:layout_marginTop="8dp"
             android:background="@drawable/butt1"
             android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:onClick="site2"
             android:text="iVolunteer Relief Trust"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="23dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView32" />
 
         <TextView
             android:id="@+id/textView31"
-            android:layout_width="402dp"
-            android:layout_height="33dp"
+            android:layout_width="213dp"
+            android:layout_height="40dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginRight="6dp"
             android:background="@drawable/butt2"
             android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:onClick="site3"
             android:text="War-Against-Covid19"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="23dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
         <TextView
             android:id="@+id/textView32"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="2dp"
-            android:layout_marginRight="2dp"
+            android:layout_width="213dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="4dp"
             android:background="@drawable/buttonblue"
             android:fontFamily="sans-serif-condensed-medium"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:onClick="site4"
             android:text="UN Volunteer"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="23dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView26" />
 
+        <ImageView
+            android:id="@+id/help"
+            android:layout_width="411dp"
+            android:layout_height="152dp"
+            android:layout_marginTop="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView31"
+            app:srcCompat="@drawable/help" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout></ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

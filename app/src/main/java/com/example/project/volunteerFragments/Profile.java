@@ -51,7 +51,7 @@ public class Profile extends Fragment {
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                            
+
                 firebaseAuth.signOut();
 
             }
