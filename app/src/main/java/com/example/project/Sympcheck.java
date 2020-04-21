@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Sympcheck extends AppCompatActivity {
     int total=0;
+    String[] symptoms = new String[6];
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.fragment_symp );
@@ -23,6 +24,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 h.setBackgroundColor(getResources().getColor(R.color.change));
+                symptoms[0] = "Headache and Sore Throat";
             }
         });
 
@@ -34,6 +36,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 f.setBackgroundColor(getResources().getColor(R.color.change));
+                symptoms[1] = "Fever";
             }
         });
 
@@ -45,6 +48,8 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 c.setBackgroundColor(getResources().getColor(R.color.change));
+                symptoms[2] = "Cough";
+
             }
         });
 
@@ -56,6 +61,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 b.setBackgroundColor(getResources().getColor(R.color.change));
+                symptoms[3] = "Shortness of Breath";
 
             }
         });
@@ -68,7 +74,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 s.setBackgroundColor(getResources().getColor(R.color.change));
-
+                symptoms[4] = "Shaking Chills";
             }
         });
 
@@ -80,7 +86,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 d.setBackgroundColor(getResources().getColor(R.color.change));
-
+                symptoms[5] = "Diarrhea";
             }
         });
 
@@ -115,6 +121,7 @@ public class Sympcheck extends AppCompatActivity {
                 if(total!=0){
                     Intent intent = new Intent(getApplicationContext(), Sympnext.class);
                     intent.putExtra("total",total);
+                    intent.putExtra("sympdata", symptoms);
                     startActivity(intent);
                 }
                 else{

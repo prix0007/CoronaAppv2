@@ -12,28 +12,39 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.Map;
+import java.util.HashMap;
+import java.util.List;
 
 public class Data extends AppCompatActivity {
+
+
     private static final String TAG = "DataJava";
     private static ArrayList<Type> mArrayList = new ArrayList<>();
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    FirebaseAuth firebaseAuth;
+    FirebaseFirestore firebaseFirestore;
     ListView listView;
+
     ArrayList<String> arrayList = new ArrayList();
     ArrayAdapter<String> arrayAdapter;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.datalayout);
 
+        firebaseAuth  = FirebaseAuth.getInstance();
+        firebaseFirestore = FirebaseFirestore.getInstance();
+
         listView = findViewById(R.id.listview);
-        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
-        listView.setAdapter(arrayAdapter);
-        db.collection("users")
+
+        firebaseFirestore.collection("user_symptoms")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -41,28 +52,31 @@ public class Data extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
-//                                List<Type> types = (List<Type>) QueryDocumentSnapshot.toObject(Type.class);
-                                    String str1 = document.getId();
-                                    Map<String, Object> str2 = document.getData();
-//                                    arrayList.add(str2);
-                                    String fullname = (String) document.get("fullname");
-                                    String age = (String) document.get("age");
-                                    String email = (String) document.get("email");
-                                    arrayList.add(fullname);
-                                    arrayList.add(email);
-                                    arrayList.add(email);
-                                Toast.makeText(getApplicationContext(),fullname+age+email,Toast.LENGTH_SHORT).show();
-//                                    arrayAdapter.notify();
-//                                    mArrayList.addAll((Collection<? extends Type>) str2);
-                                // Add all to your list
-//                                mArrayList.addAll((Collection<? extends Type>) document);
-                                Log.d(TAG, "onSuccess: " + str2);
+                                HashMap sympmap = (HashMap) document.get("symptoms");
+                                String symptoms = "";
+                                for(int i =0 ; i<6; ++i){
+                                    if(sympmap.get(String.valueOf(i))!=null){
+                                        symptoms += sympmap.get(String.valueOf(i)) +" ,";
+                                    }
+                                }
+                                HashMap locmap = (HashMap) document.get("loc");
+                                String loc = "( Latitude: " + locmap.get("latitude").toString() +"\nLongitude"+ locmap.get("longitude").toString()+" )";
+                                String data = "Name of User: "+ document.getString("name")+
+                                        "\nAge: "+ document.getString("age")+"\nSymptoms: "+symptoms
+                                        +"\nLast Location: "+loc;
+                                arrayList.add(data);
                             }
+                            arrayAdapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,arrayList);
+                            listView.setAdapter(arrayAdapter);
                         } else {
                             Log.d(TAG, "Error getting documents: ", task.getException());
                         }
                     }
                 });
+
+
+
+
 
     }
 

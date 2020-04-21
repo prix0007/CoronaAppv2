@@ -172,7 +172,7 @@ public class Userhome extends AppCompatActivity {
         {
             if(grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED)
             {
-                Intent ii1=new Intent(getApplicationContext(),Sympnext.class);
+                Intent ii1=new Intent(getApplicationContext(),Map.class);
                 startActivity(ii1);
             }
             else
