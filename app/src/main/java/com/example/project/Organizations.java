@@ -22,8 +22,6 @@ public class Organizations extends AppCompatActivity {
         TextView site3=findViewById(R.id.textView28);  //iVOLUNTEER
         TextView site4=findViewById(R.id.textView31);  //WAR AGAINST COVID
 
-
-
     site1.setOnClickListener(v -> {
         Intent i1 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://volunteer.ramusa.org/"));
         startActivity(i1);

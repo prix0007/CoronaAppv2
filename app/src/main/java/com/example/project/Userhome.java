@@ -3,6 +3,7 @@ package com.example.project;
 import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -16,9 +17,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.gms.common.api.ResolvableApiException;
 import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.location.LocationSettingsRequest;
+import com.google.android.gms.location.LocationSettingsResponse;
+import com.google.android.gms.location.SettingsClient;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -30,7 +37,12 @@ public class Userhome extends AppCompatActivity {
 
     private static final int MY_PERMISSIONS_REQUEST_ACCESS_COURSE_LOCATION =1 ;
 
+    private static final int REQUEST_CHECK_SETTINGS = 0x1;
+
+
     private FusedLocationProviderClient fusedLocationClient;
+
+
 
     private Button symptoms, mapcheck, preventioncontrol, signout, userName;
     FirebaseAuth firebaseAuth;
@@ -90,6 +102,7 @@ public class Userhome extends AppCompatActivity {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLocation();
+
     }
 
     private void initializeItems(){
@@ -99,7 +112,6 @@ public class Userhome extends AppCompatActivity {
         signout = findViewById(R.id.signout);
         userName = findViewById(R.id.userName);
     }
-
 
     private void fetchLocation() {
 
@@ -137,10 +149,7 @@ public class Userhome extends AppCompatActivity {
             } else {
                 // User denied permission for first time
                 ActivityCompat.requestPermissions(Userhome.this,
-                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
-                        MY_PERMISSIONS_REQUEST_ACCESS_COURSE_LOCATION);
-
-
+                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, MY_PERMISSIONS_REQUEST_ACCESS_COURSE_LOCATION);
             }
         }
         else {

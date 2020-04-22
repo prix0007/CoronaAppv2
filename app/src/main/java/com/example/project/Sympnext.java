@@ -158,7 +158,6 @@ public class Sympnext extends AppCompatActivity {
     }
 
     public void back(View view) {
-        Intent ba = new Intent(getApplication(),Userhome.class);
-        startActivity(ba);
+        finish();
     }
 }
