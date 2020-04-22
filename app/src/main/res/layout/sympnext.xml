@@ -10,20 +10,15 @@
         android:layout_height="match_parent">
 
 
-    <ImageView
-        android:id="@+id/block"
-        android:layout_width="393dp"
-        android:layout_height="141dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:background="@drawable/block"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/block"
+            android:layout_width="393dp"
+            android:layout_height="141dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/block"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/next"
@@ -108,19 +103,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
-    <ImageView
-        android:id="@+id/usfo"
-        android:layout_width="226dp"
-        android:layout_height="221dp"
-        android:background="@drawable/sympcheck"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="1.0" />
+        <ImageView
+            android:id="@+id/usfo"
+            android:layout_width="226dp"
+            android:layout_height="221dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/sympcheck"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <TextView
+        <TextView
         android:id="@+id/textView2"
         android:layout_width="172dp"
         android:layout_height="61dp"
@@ -137,6 +131,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView10" />
 
+        <Button
+            android:id="@+id/button"
+            android:layout_width="85dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/buttonblue"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center"
+            android:text="Home"
+            android:onClick="back"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

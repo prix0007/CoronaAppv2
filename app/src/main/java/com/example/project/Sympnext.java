@@ -156,4 +156,9 @@ public class Sympnext extends AppCompatActivity {
         Intent up = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.mygov.in/covid-19/?cbps=1"));
         startActivity(up);
     }
+
+    public void back(View view) {
+        Intent ba = new Intent(getApplication(),Userhome.class);
+        startActivity(ba);
+    }
 }
