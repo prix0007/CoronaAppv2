@@ -63,8 +63,9 @@ public class Data extends AppCompatActivity {
                                 String loc = "( Latitude: " + locmap.get("latitude").toString() +"\nLongitude"+ locmap.get("longitude").toString()+" )";
                                 String data = "Name of User: "+ document.getString("name")+
                                         "\nAge: "+ document.getString("age")+"\nSymptoms: "+symptoms
-                                        +"\nLast Location: "+loc;
+                                        +"\nLast Location:\n"+loc;
                                 arrayList.add(data);
+
                             }
                             arrayAdapter = new ArrayAdapter<String>(getApplicationContext(),android.R.layout.simple_list_item_1,arrayList);
                             listView.setAdapter(arrayAdapter);
