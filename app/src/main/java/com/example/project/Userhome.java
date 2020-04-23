@@ -45,7 +45,7 @@ public class Userhome extends AppCompatActivity {
 
 
 
-    private Button symptoms, mapcheck, preventioncontrol, signout, userName,button3;
+    private Button symptoms, mapcheck, preventioncontrol, signout, userName,stats_u;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
 
@@ -84,11 +84,14 @@ public class Userhome extends AppCompatActivity {
                 startActivity(map);
             }
         });
-        button3.setOnClickListener(new View.OnClickListener() {
+
+
+
+        stats_u.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b=new Intent(getApplicationContext(), UserStatus.class);
-                startActivity(b);
+                Intent b1=new Intent(getApplicationContext(), UserStatus.class);
+                startActivity(b1);
             }
         });
 
@@ -119,7 +122,7 @@ public class Userhome extends AppCompatActivity {
         preventioncontrol = findViewById(R.id.preventioncontrol);
         signout = findViewById(R.id.signout);
         userName = findViewById(R.id.userName);
-        button3 = findViewById(R.id.button3);
+        stats_u= findViewById(R.id.button333);
     }
 
     private void fetchLocation() {

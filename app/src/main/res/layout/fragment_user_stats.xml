@@ -26,7 +26,7 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/volunteerRefreshStats"
+                android:id="@+id/userRefreshStats11"
                 android:layout_width="wrap_content"
                 android:layout_height="47dp"
                 android:layout_gravity="center_horizontal"
@@ -82,7 +82,7 @@
                         tools:layout_editor_absoluteY="169dp" />
 
                     <TextView
-                        android:id="@+id/stats_total"
+                        android:id="@+id/stats_total11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
@@ -120,7 +120,7 @@
                         tools:layout_editor_absoluteY="213dp" />
 
                     <TextView
-                        android:id="@+id/stats_indian"
+                        android:id="@+id/stats_indian11"
 
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -159,7 +159,7 @@
                         tools:layout_editor_absoluteY="274dp" />
 
                     <TextView
-                        android:id="@+id/stats_forgien"
+                        android:id="@+id/stats_foreign11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -201,7 +201,7 @@
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/stats_active"
+                        android:id="@+id/stats_active11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -235,7 +235,7 @@
                         android:textColor="#009A06" />
 
                     <TextView
-                        android:id="@+id/stats_recovered"
+                        android:id="@+id/stats_recovered11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -267,7 +267,7 @@
                         android:textAlignment="center" />
 
                     <TextView
-                        android:id="@+id/stats_deceased"
+                        android:id="@+id/stats_deceased11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
@@ -283,7 +283,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:id="@+id/dataList"
+                    android:id="@+id/dataList11"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical" >
