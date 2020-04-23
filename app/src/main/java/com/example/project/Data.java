@@ -54,9 +54,9 @@ public class Data extends AppCompatActivity {
                                 Log.d(TAG, document.getId() + " => " + document.getData());
                                 HashMap sympmap = (HashMap) document.get("symptoms");
                                 String symptoms = "";
-                                for(int i =0 ; i<6; ++i){
+                                for(int i =0 ; i<7; ++i){
                                     if(sympmap.get(String.valueOf(i))!=null){
-                                        symptoms += sympmap.get(String.valueOf(i)) +" ,";
+                                        symptoms += sympmap.get(String.valueOf(i)) +" ";
                                     }
                                 }
                                 HashMap locmap = (HashMap) document.get("loc");

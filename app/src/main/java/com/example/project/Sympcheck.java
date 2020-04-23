@@ -12,8 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Sympcheck extends AppCompatActivity {
     int total=0;
-    int flag1=1,flag2=1,flag3=1,flag4=1,flag5=1,flag6=1;
-    String[] symptoms = new String[6];
+    int flag1=1,flag2=1,flag3=1,flag4=1,flag5=1,flag6=1,flag7=1;
+    String[] symptoms = new String[7];
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.fragment_symp );
@@ -118,6 +118,23 @@ public class Sympcheck extends AppCompatActivity {
                 symptoms[5] = "Diarrhea";
             }
         });
+        final Button no= (Button) findViewById( R.id.head2 );
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                total=total+2;
+//                int flag = 1;
+                flag7 = 0;
+                if(flag7==0) {
+
+                    total =1;
+                }
+                status(total);
+                System.out.println( total );
+                no.setBackgroundColor(getResources().getColor(R.color.change));
+                symptoms[6] = "Safe";
+            }
+        });
 
         final TextView r = (TextView) findViewById( R.id.textView20);
         r.setOnClickListener(new View.OnClickListener() {
@@ -139,6 +156,7 @@ public class Sympcheck extends AppCompatActivity {
                 d.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 h.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 c.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                no.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 total=0;
             }
         });
@@ -147,13 +165,21 @@ public class Sympcheck extends AppCompatActivity {
         check.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(total!=0){
+                if(total>1){
                     Intent intent = new Intent(getApplicationContext(), Sympnext.class);
                     intent.putExtra("total",total);
                     intent.putExtra("sympdata", symptoms);
                     startActivity(intent);
                 }
-                else{
+                else if(total==1){
+                    Toast.makeText(getApplicationContext(),"You are Safe",Toast.LENGTH_SHORT).show();
+                    Intent no= new Intent(getApplicationContext(), Sympnext.class);
+                    no.putExtra("total",total);
+                    no.putExtra("sympdata", symptoms);
+                    startActivity(no);
+                }
+
+                else {
                     Toast.makeText(getApplicationContext(),"No Symptom Checked!",Toast.LENGTH_SHORT).show();
                 }
             }
@@ -165,8 +191,15 @@ public class Sympcheck extends AppCompatActivity {
         ImageView onverge= findViewById(R.id.onverge);
         ImageView notsafe= findViewById(R.id.notsafe);
         ImageView danger= findViewById(R.id.danger);
+        if(tot==1){
+            ques.setVisibility(View.INVISIBLE);
+            safe.setVisibility(View.INVISIBLE);
+            onverge.setVisibility(View.INVISIBLE);
+            notsafe.setVisibility(View.INVISIBLE);
+            danger.setVisibility(View.INVISIBLE);
+        }
 
-        if(tot!=0 && tot < 4){
+        else if(tot>1 && tot < 4){
             ques.setVisibility(View.INVISIBLE);
             safe.setVisibility(View.VISIBLE);
             onverge.setVisibility(View.INVISIBLE);

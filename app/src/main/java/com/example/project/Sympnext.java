@@ -119,8 +119,12 @@ public class Sympnext extends AppCompatActivity {
 
 
         int a = extra.getInt("total");
+        if(a==1){
+            String display="You are SAFE!!  Keep On Social Distancing and Stay Healthy";
+            dis.setText( display );
+        }
 
-        if(a<=4){
+        if((a>1) && (a<=4)){
             String display="Your Symptoms shows that you're healthy and fine. Keep On Social Distancing and Stay Healthy";
             dis.setText( display );
         }

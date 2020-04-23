@@ -12,6 +12,17 @@
 
 
         <Button
+            android:id="@+id/head2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="47dp"
+            android:background="#FF0000"
+            app:layout_constraintEnd_toStartOf="@+id/ladyr"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ladyl"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <Button
             android:id="@+id/cough"
             android:layout_width="20dp"
             android:layout_height="20dp"
@@ -93,6 +104,16 @@
             android:background="@drawable/ladyr"
             app:layout_constraintStart_toEndOf="@+id/cough"
             app:layout_constraintTop_toTopOf="@+id/ladyl" />
+
+        <ImageView
+            android:id="@+id/none"
+            android:layout_width="119dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/none"
+            app:layout_constraintBottom_toTopOf="@+id/ladyr"
+            app:layout_constraintStart_toEndOf="@+id/head2" />
 
         <ImageView
         android:id="@+id/safe"
@@ -245,5 +266,5 @@
         app:layout_constraintStart_toStartOf="@+id/imageView12"
         app:layout_constraintTop_toTopOf="@+id/imageView12" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
