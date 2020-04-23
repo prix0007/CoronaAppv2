@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Sympcheck extends AppCompatActivity {
     int total=0;
+    int flag1=1,flag2=1,flag3=1,flag4=1,flag5=1,flag6=1;
     String[] symptoms = new String[6];
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
@@ -20,7 +21,11 @@ public class Sympcheck extends AppCompatActivity {
         h.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                total=total+2;
+//                int flag1 = 1;
+                if(flag1==1) {
+                    flag1 = 0;
+                    total = total + 2;
+                }
                 status(total);
                 System.out.println( total );
                 h.setBackgroundColor(getResources().getColor(R.color.change));
@@ -32,7 +37,11 @@ public class Sympcheck extends AppCompatActivity {
         f.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                total=total+3;
+//                int flag1 = 1;
+                if(flag2==1) {
+                    flag2 = 0;
+                    total = total + 3;
+                }
                 status(total);
                 System.out.println( total );
                 f.setBackgroundColor(getResources().getColor(R.color.change));
@@ -44,7 +53,12 @@ public class Sympcheck extends AppCompatActivity {
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                total=total+2;
+//                total=total+2;
+//                int flag = 1;
+                if(flag3==1) {
+                    flag3 = 0;
+                    total = total + 2;
+                }
                 status(total);
                 System.out.println( total );
                 c.setBackgroundColor(getResources().getColor(R.color.change));
@@ -57,7 +71,12 @@ public class Sympcheck extends AppCompatActivity {
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                total=total+8;
+//                total=total+8;
+//                int flag1 = 1;
+                if(flag4==1) {
+                    flag4 = 0;
+                    total = total + 8;
+                }
                 status(total);
                 System.out.println( total );
                 b.setBackgroundColor(getResources().getColor(R.color.change));
@@ -70,7 +89,12 @@ public class Sympcheck extends AppCompatActivity {
         s.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                total=total+2;
+//                total=total+2;
+//                int flag = 1;
+                if(flag5==1) {
+                    flag5 = 0;
+                    total = total + 2;
+                }
                 status(total);
                 System.out.println( total );
                 s.setBackgroundColor(getResources().getColor(R.color.change));
@@ -82,7 +106,12 @@ public class Sympcheck extends AppCompatActivity {
         d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                total=total+2;
+//                total=total+2;
+//                int flag6 = 1;
+                if(flag6==1) {
+                    flag6 = 0;
+                    total = total + 2;
+                }
                 status(total);
                 System.out.println( total );
                 d.setBackgroundColor(getResources().getColor(R.color.change));
