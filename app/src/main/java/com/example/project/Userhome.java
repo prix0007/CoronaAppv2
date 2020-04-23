@@ -18,6 +18,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.google.android.gms.common.api.ResolvableApiException;
+import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationServices;
@@ -44,7 +45,7 @@ public class Userhome extends AppCompatActivity {
 
 
 
-    private Button symptoms, mapcheck, preventioncontrol, signout, userName;
+    private Button symptoms, mapcheck, preventioncontrol, signout, userName,button3;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
 
@@ -83,6 +84,13 @@ public class Userhome extends AppCompatActivity {
                 startActivity(map);
             }
         });
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent b=new Intent(getApplicationContext(), UserStatus.class);
+                startActivity(b);
+            }
+        });
 
         preventioncontrol.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,6 +119,7 @@ public class Userhome extends AppCompatActivity {
         preventioncontrol = findViewById(R.id.preventioncontrol);
         signout = findViewById(R.id.signout);
         userName = findViewById(R.id.userName);
+        button3 = findViewById(R.id.button3);
     }
 
     private void fetchLocation() {
