@@ -33,7 +33,7 @@ public class Stats extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View v = inflater.inflate(R.layout.fragment_volunteer_stats, container);
+        View v = inflater.inflate(R.layout.fragment_volunteer_stats, container, false);
 
         initializeItems(v);
 
@@ -92,7 +92,7 @@ public class Stats extends Fragment {
         refresh_stats = v.findViewById(R.id.volunteerRefreshStats);
         total_cases = v.findViewById(R.id.stats_total);
         total_indian_cases = v.findViewById(R.id.stats_indian);
-        total_forgien_cases = v.findViewById(R.id.stats_forgien);
+        total_forgien_cases = v.findViewById(R.id.stats_foreign);
         recovered_cases = v.findViewById(R.id.stats_recovered);
         active_cases = v.findViewById(R.id.stats_active);
         deceased_cases = v.findViewById(R.id.stats_deceased);

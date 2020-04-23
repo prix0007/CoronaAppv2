@@ -159,7 +159,7 @@
                         tools:layout_editor_absoluteY="274dp" />
 
                     <TextView
-                        android:id="@+id/stats_forgien"
+                        android:id="@+id/stats_foreign"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"

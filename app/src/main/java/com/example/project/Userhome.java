@@ -93,10 +93,8 @@ public class Userhome extends AppCompatActivity {
         stats_u.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserStatus fragment=new UserStatus();
-                FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.fraguser,fragment);
-                transaction.commit();
+                Intent i = new Intent(getApplicationContext(), UserStatus.class);
+                startActivity(i);
             }
         });
 
