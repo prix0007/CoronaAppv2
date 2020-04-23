@@ -79,6 +79,7 @@ public class Stats extends Fragment {
                 }
                 FragmentManager fm = getChildFragmentManager();
                 FragmentTransaction ft = fm.beginTransaction();
+                dataList.removeAllViews();
                 for(Map<String, String> a: data){
                     ft.add(R.id.dataList, new RegionData(a.get("region"), a.get("totalConfirmed"), a.get("active"),a.get("recovered"),a.get("deceased")));
                 }
