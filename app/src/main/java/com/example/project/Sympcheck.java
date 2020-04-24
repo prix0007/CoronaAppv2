@@ -12,27 +12,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Sympcheck extends AppCompatActivity {
     int total=0;
-    int flag1=1,flag2=1,flag3=1,flag4=1,flag5=1,flag6=1,flag7=1;
+    int none_checked=0,flag1=1,flag2=1,flag3=1,flag4=1,flag5=1,flag6=1,flag7=1;
     String[] symptoms = new String[7];
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.fragment_symp );
         final Button h = (Button) findViewById( R.id.head );
-        h.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-//                int flag1 = 1;
-                if(flag1==1) {
-                    flag1 = 0;
-                    total = total + 2;
-                }
-                status(total);
-                System.out.println( total );
-                h.setBackgroundColor(getResources().getColor(R.color.change));
-                symptoms[0] = "Headache and Sore Throat";
-            }
-        });
 
+        final Button none = (Button) findViewById(R.id.head2);// this is none
         final Button f = (Button) findViewById( R.id.fever );
         f.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +32,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 f.setBackgroundColor(getResources().getColor(R.color.change));
+                none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 symptoms[1] = "Fever";
             }
         });
@@ -62,6 +50,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 c.setBackgroundColor(getResources().getColor(R.color.change));
+                none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 symptoms[2] = "Cough";
 
             }
@@ -80,6 +69,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 b.setBackgroundColor(getResources().getColor(R.color.change));
+                none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 symptoms[3] = "Shortness of Breath";
 
             }
@@ -98,6 +88,7 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 s.setBackgroundColor(getResources().getColor(R.color.change));
+                none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 symptoms[4] = "Shaking Chills";
             }
         });
@@ -115,27 +106,70 @@ public class Sympcheck extends AppCompatActivity {
                 status(total);
                 System.out.println( total );
                 d.setBackgroundColor(getResources().getColor(R.color.change));
+                none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 symptoms[5] = "Diarrhea";
             }
         });
-        final Button no= (Button) findViewById( R.id.head2 );
-        no.setOnClickListener(new View.OnClickListener() {
+//        final Button no= (Button) findViewById( R.id.head2 );
+//        no.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+////                total=total+2;
+////                int flag = 1;
+//                flag7 = 0;
+//                if(flag7==0) {
+//
+//                    total =1;
+//                }
+//                status(total);
+//                System.out.println( total );
+//                no.setBackgroundColor(getResources().getColor(R.color.change));
+//                h.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+//                symptoms[6] = "Safe";
+//            }
+//        });
+        h.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                total=total+2;
-//                int flag = 1;
-                flag7 = 0;
-                if(flag7==0) {
-
-                    total =1;
+//                int flag1 = 1;
+                if(flag1==1) {
+                    flag1 = 0;
+                    total = total + 2;
                 }
                 status(total);
                 System.out.println( total );
-                no.setBackgroundColor(getResources().getColor(R.color.change));
+                h.setBackgroundColor(getResources().getColor(R.color.change));
+                none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            }
+        });
+        none.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                int flag1 = 1;
+//                if(flag1==1) {
+//                    flag1 = 0;
+//                    total = total + 2;
+//                }
+                flag5=1;
+                flag2=1;
+                flag3=1;
+                flag4=1;
+                flag6=1;
+                total  = 0;
+                status(total);
+                System.out.println( total );
+                none.setBackgroundColor(getResources().getColor(R.color.change));
+
+                f.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                b.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                s.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                d.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                h.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                c.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+//                no.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 symptoms[6] = "Safe";
             }
         });
-
         final TextView r = (TextView) findViewById( R.id.textView20);
         r.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,7 +190,8 @@ public class Sympcheck extends AppCompatActivity {
                 d.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 h.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 c.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-                no.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+//                no.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
                 total=0;
             }
         });
