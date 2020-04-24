@@ -103,6 +103,7 @@
             android:layout_height="216dp"
             android:layout_marginTop="68dp"
             android:background="@drawable/ladyr"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cough"
             app:layout_constraintTop_toTopOf="@+id/ladyl" />
 
@@ -110,11 +111,11 @@
             android:id="@+id/none"
             android:layout_width="119dp"
             android:layout_height="30dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
             android:background="@drawable/none"
             app:layout_constraintBottom_toTopOf="@+id/ladyr"
-            app:layout_constraintStart_toEndOf="@+id/head2" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
+            app:layout_constraintStart_toStartOf="@+id/ladyr" />
 
         <ImageView
         android:id="@+id/safe"
