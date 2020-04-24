@@ -67,7 +67,7 @@ public class Userhome extends AppCompatActivity {
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.isSuccessful()){
                     DocumentSnapshot document = task.getResult();
-                    userName.setText("Hello, \n"+document.getString("fullname"));
+                    userName.setText("Hello\n"+document.getString("fullname"));
                 }
             }
         });
