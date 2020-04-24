@@ -24,11 +24,11 @@
                 android:background="@drawable/block"
                 android:textColor="#FFFFFF"
                 android:textSize="45sp"
-                android:text="REGISTER" />
+                android:text="@string/register1" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Please fill in the details"
+                android:text="@string/det1"
                 android:textAlignment="center"
                 android:gravity="center_horizontal" />
         </LinearLayout>
@@ -41,7 +41,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:text="Name : "
+                android:text="@string/name1"
                 android:textColor="#0478FF"
                 android:textSize="25dp"/>
 
@@ -49,7 +49,7 @@
                 android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter Name Here"
+                android:hint="@string/enter_name"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:layout_marginEnd="10dp"
@@ -65,7 +65,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:text="Email : "
+                android:text="@string/em1"
                 android:textColor="#0478FF"
                 android:textSize="25dp"/>
 
@@ -73,7 +73,7 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter Email Here"
+                android:hint="@string/enter_email_here1"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:layout_marginEnd="10dp"
@@ -89,7 +89,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:text="Password : "
+                android:text="@string/password1"
                 android:textColor="#0478FF"
                 android:textSize="25dp"/>
 
@@ -97,7 +97,7 @@
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter New Password Here"
+                android:hint="@string/enter_new_password_here"
                 android:ems="10"
                 android:inputType="textPassword"
                 android:layout_marginEnd="10dp"
@@ -113,7 +113,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:text="Age : "
+                android:text="@string/age00"
                 android:textColor="#0478FF"
                 android:textSize="25dp"/>
 
@@ -121,7 +121,7 @@
                 android:id="@+id/age"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:hint="Age Here"
+                android:hint="@string/age_here1"
                 android:ems="10"
                 android:inputType="number"
                 android:layout_marginEnd="10dp"
@@ -138,7 +138,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:text="Role : "
+                android:text="@string/role1"
                 android:textColor="#0478FF"
                 android:textSize="25dp"/>
 
@@ -162,7 +162,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:text="Occupation : "
+                android:text="@string/occupation1"
                 android:textColor="#0478FF"
                 android:textSize="25dp"/>
 
@@ -188,7 +188,7 @@
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginStart="10dp"
-                android:text="WorkPlace : "
+                android:text="@string/workplace0"
                 android:textColor="#0478FF"
                 android:textSize="25dp"/>
 
@@ -198,7 +198,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:hint="Enter WorkPlace Here"
+                android:hint="@string/enter_workpl"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:layout_marginEnd="10dp"
@@ -216,7 +216,7 @@
                 android:layout_height="65dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/buttonblue"
-                android:text="Submit"
+                android:text="@string/submit00"
                 android:textColor="#FFFFFF"
                 android:textSize="25sp" />
 

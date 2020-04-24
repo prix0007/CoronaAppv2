@@ -13,6 +13,9 @@
     <string name="menu_map">Contribute</string>
 
     <string name="home_second">Home Second</string>
+
+
+
     <string-array name="occ">
         <item>Select</item>
         <item>Doctor</item>
@@ -21,11 +24,16 @@
         <item>Police</item>
         <item>Others</item>
     </string-array>
+
+
+
     <string-array name="roles">
         <item>User</item>
         <item>Volunteer</item>
         <item>Authority</item>
     </string-array>
+
+
     <string name="title_activity_volunteer_homev2">VolunteerHomev2</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
@@ -33,6 +41,94 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="reg_mail">Enter you Registered Email</string>
+    <string name="resetlink">Send Reset Link</string>
+    <string name="b_login">Back to Login</string>
+    <string name="cowar_name">COWAR</string>
+    <string name="app_naam">The Corona Warrior App</string>
+    <string name="details">Please fill in the details</string>
+    <string name="reg">REGISTER</string>
+    <string name="em">Email</string>
+    <string name="pwd">Password</string>
+    <string name="name_">Name</string>
+    <string name="submit_but">Submit</string>
+    <string name="age">Age</string>
+    <string name="register1">REGISTER</string>
+    <string name="det1">Please fill in the details</string>
+    <string name="name1">Name :</string>
+    <string name="enter_name">Enter Name Here</string>
+    <string name="em1">Email :</string>
+    <string name="enter_email_here1">Enter Email Here</string>
+    <string name="password1">Password :</string>
+    <string name="enter_new_password_here">Enter New Password Here</string>
+    <string name="age00">Age :</string>
+    <string name="age_here1">Age Here</string>
+    <string name="role1">Role :</string>
+    <string name="occupation1">Occupation :</string>
+    <string name="workplace0">WorkPlace :</string>
+    <string name="enter_workpl">Enter WorkPlace Here</string>
+    <string name="submit00">Submit</string>
+    <string name="authority12">AUTHORITY</string>
+    <string name="view_data">View Data</string>
+    <string name="mapcheck">MapCheck</string>
+    <string name="contribute1">Contribute</string>
+    <string name="sign_out12">Sign Out</string>
+    <string name="data13">DATA</string>
+    <string name="region_name14">Region Name</string>
+    <string name="total_cases14">Total Cases</string>
+    <string name="active_cases14">Active Cases</string>
+    <string name="dashes14">------</string>
+    <string name="recovered_cases14">Recovered Cases</string>
+    <string name="deceased14">Deceased</string>
+    <string name="checkout_symps">Checkout for Coronavirus Symptoms</string>
+    <string name="symptoms15">Symptoms</string>
+    <string name="continue15">Continue</string>
+    <string name="reset15">Reset</string>
+    <string name="volunteer16">Volunteer</string>
+    <string name="though16">“The smallest act of kindness is worth more than the grandest intention.”</string>
+    <string name="oscar_wilde16">~Oscar Wilde</string>
+    <string name="para16">COVID-19 is an unfamiliar foe that is reshaping our daily routines. This upheavel has rendered many people helpess.To help such people, many organizations have been setup. Extend your hand to such organizations by volunteering for work that suits you.</string>
+    <string name="contribute16">Contribute</string>
+    <string name="profile17">Profile</string>
+    <string name="hello_n_volunteer17">Hello \n Volunteer</string>
+    <string name="your_contributions17">Your Contributions</string>
+    <string name="sign_out17">Sign Out</string>
+    <string name="refresh18">Refresh</string>
+    <string name="statistics18">Statistics</string>
+    <string name="total_cases18">Total Cases</string>
+    <string name="confirmed_indian_cases18">Confirmed Indian Cases</string>
+    <string name="confirmed_forgein_cases18">Confirmed Foreign Cases</string>
+    <string name="active_cases18">Active Cases</string>
+    <string name="recovered_cases18">Recovered Cases</string>
+    <string name="deceased18">Deceased</string>
+    <string name="login_to_your_account19">Login to your account</string>
+    <string name="login19">LOGIN</string>
+    <string name="welcome19">Welcome,</string>
+    <string name="email19">Email</string>
+    <string name="new_user_register19">New User? Register</string>
+    <string name="submit19">Submit</string>
+    <string name="password19">Password</string>
+    <string name="forgot_password19">Forgot Password</string>
+    <string name="organizations22">Organizations</string>
+    <string name="ram_volunteer_corps22">RAM Volunteer Corps</string>
+    <string name="ivolunteer_relief_trust22">iVolunteer Relief Trust</string>
+    <string name="war_against_covid1922">War-Against-Covid19</string>
+    <string name="un_volunteer22">UN Volunteer</string>
+    <string name="user21">USER</string>
+    <string name="volunteer21">VOLUNTEER</string>
+    <string name="authority21">AUTHORITY</string>
+    <string name="prevention24">PREVENTION</string>
+    <string name="status25">STATUS</string>
+    <string name="consult_doctor25">Consult Doctor</string>
+    <string name="prevention_controls25">Prevention Controls</string>
+    <string name="updates25">Updates</string>
+    <string name="back25">Back</string>
+    <string name="user26">USER</string>
+    <string name="symptoms26">Symptoms</string>
+    <string name="prevention_controls26">Prevention Controls</string>
+    <string name="mapcheck26">MapCheck</string>
+    <string name="signout26">Signout</string>
+    <string name="status26">Status</string>
 
 
 </resources>

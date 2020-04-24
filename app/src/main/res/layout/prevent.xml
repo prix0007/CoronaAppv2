@@ -33,7 +33,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center_horizontal"
         android:onClick="user_nav"
-        android:text="PREVENTION"
+        android:text="@string/prevention24"
         android:textColor="#ffffff"
         android:textSize="65dp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -32,7 +32,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:background="@drawable/butt1"
-                android:text="Refresh"
+                android:text="@string/refresh18"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
@@ -49,7 +49,7 @@
                     android:background="@drawable/block"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:gravity="center_horizontal"
-                    android:text="Statistics"
+                    android:text="@string/statistics18"
                     android:textAlignment="center"
                     android:textColor="#ffffff"
                     android:textSize="24sp"
@@ -73,7 +73,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Total Cases"
+                        android:text="@string/total_cases18"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         tools:layout_conversion_absoluteHeight="19dp"
@@ -86,7 +86,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="-----"
+                        android:text="@string/dashes14"
                         android:textAlignment="center"
                         android:textStyle="bold"
                         tools:layout_conversion_absoluteHeight="19dp"
@@ -112,7 +112,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Confirmed Indian Cases "
+                        android:text="@string/confirmed_indian_cases18"
                         android:textAlignment="center"
                         tools:layout_conversion_absoluteHeight="37dp"
                         tools:layout_conversion_absoluteWidth="107dp"
@@ -125,7 +125,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="-----"
+                        android:text="@string/dashes14"
                         android:textAlignment="center"
                         android:textStyle="bold"
                         tools:layout_conversion_absoluteHeight="19dp"
@@ -151,7 +151,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Confirmed Forgein Cases"
+                        android:text="@string/confirmed_forgein_cases18"
                         android:textAlignment="center"
                         tools:layout_conversion_absoluteHeight="37dp"
                         tools:layout_conversion_absoluteWidth="107dp"
@@ -163,7 +163,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="-----"
+                        android:text="@string/dashes14"
                         android:textAlignment="center"
                         android:textStyle="bold"
                         tools:layout_conversion_absoluteHeight="16dp"
@@ -194,7 +194,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Active Cases"
+                        android:text="@string/active_cases18"
                         android:textAlignment="center"
                         android:textColor="#F44336"
                         android:textColorHighlight="#F44336"
@@ -205,7 +205,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="-----"
+                        android:text="@string/dashes14"
                         android:textAlignment="center"
                         android:textColor="#F40B0B"
                         android:textStyle="bold" />
@@ -230,16 +230,17 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Recovered Cases"
+                        android:text="@string/recovered_cases18"
                         android:textAlignment="center"
-                        android:textColor="#009A06" />
+                        android:textColor="#009A06"
+                        />
 
                     <TextView
                         android:id="@+id/stats_recovered"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="-----"
+                        android:text="@string/dashes14"
                         android:textAlignment="center"
                         android:textColor="#018C07"
                         android:textStyle="bold" />
@@ -263,7 +264,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="Deceased"
+                        android:text="@string/deceased18"
                         android:textAlignment="center" />
 
                     <TextView
@@ -271,7 +272,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:text="-----"
+                        android:text="@string/dashes14"
                         android:textAlignment="center"
                         android:textStyle="bold" />
 

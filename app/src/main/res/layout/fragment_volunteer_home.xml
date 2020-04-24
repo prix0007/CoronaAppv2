@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/block"
                 android:fontFamily="sans-serif-condensed-medium"
-                android:text="Volunteer"
+                android:text="@string/volunteer16"
                 android:textColor="#FFFCFC"
                 android:textSize="65dp" />
 
@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:gravity="center_horizontal"
-                android:text="“The smallest act of kindness is worth more than the grandest intention.”"
+                android:text="@string/though16"
                 android:textAlignment="center" />
 
             <TextView
@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="-25dp"
                 android:gravity="center_horizontal"
-                android:text="~Oscar Wilde"
+                android:text="@string/oscar_wilde16"
                 android:textAlignment="center" />
 
             <ImageView
@@ -60,7 +60,7 @@
                 android:background="@drawable/butt2"
                 android:fontFamily="sans-serif-condensed"
                 android:padding="10dp"
-                android:text="COVID-19 is an unfamiliar foe that’s reshaping our daily routines. This upheavel has rendered many people helpess.To help such people, many organizations have been setup. Extend your hand to such organizations by volunteering for work that suits you."
+                android:text="@string/para16"
                 android:textAlignment="center"
                 android:textColor="#ffffff"
                 android:textSize="15sp" />
@@ -76,7 +76,7 @@
                     android:layout_height="62dp"
                     android:layout_gravity="fill"
                     android:background="@drawable/butt3"
-                    android:text="Contribute"
+                    android:text="@string/contribute16"
                     android:textAllCaps="false"
                     android:textColor="#FFFEFE"
                     android:textSize="18sp"
