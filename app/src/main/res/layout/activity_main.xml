@@ -11,34 +11,33 @@
         android:layout_height="match_parent">
 
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="413dp"
-        android:layout_height="313dp"
-        android:layout_marginTop="109dp"
-        android:background="@drawable/firstgood"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tt2"
-        app:layout_constraintVertical_bias="1.0" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="413dp"
+            android:layout_height="313dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/firstgood"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tt2" />
 
-    <TextView
-        android:id="@+id/tt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:background="@null"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:gravity="center_horizontal"
-        android:text="@string/cowar_name"
-        android:textColor="#000000"
-        android:textSize="65dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:background="@null"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_horizontal"
+            android:text="@string/cowar_name"
+            android:textColor="#000000"
+            android:textSize="65dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+        <TextView
         android:id="@+id/tt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
