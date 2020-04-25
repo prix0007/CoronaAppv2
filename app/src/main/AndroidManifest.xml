@@ -49,10 +49,7 @@
         <activity android:name=".Userhome" />
         <activity android:name=".Sympcheck" />
         <activity android:name=".Prevent" />
-        <activity android:name=".VolunteerHome" />
         <activity android:name=".Map" />
-        <activity android:name=".VolunteerStats" />
-        <activity android:name=".VolunteerProfile" />
         <activity android:name=".Organizations" />
         <activity android:name=".AuthorityHome" />
         <activity android:name=".Data" />

@@ -50,6 +50,8 @@ public class Sympnext extends AppCompatActivity {
         TextView dis=(TextView) findViewById( R.id.next );
         Bundle extra = getIntent().getExtras();
 
+        int a = extra.getInt("total");
+
         String[] user_symptoms;
         user_symptoms = (String[]) extra.get("sympdata");
         Map<String, Object> sympmap = new HashMap<>();
@@ -96,6 +98,7 @@ public class Sympnext extends AppCompatActivity {
                         user.put("name",document.getString("fullname"));
                         user.put("loc",loc);
                         user.put("age",document.getString("age"));
+                        user.put("severity",a);
                         DocumentReference docref = firebaseFirestore.collection("user_symptoms").document(firebaseAuth.getCurrentUser().getUid());
                         docref.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -118,7 +121,7 @@ public class Sympnext extends AppCompatActivity {
         });
 
 
-        int a = extra.getInt("total");
+
         if(a==1){
             String display="You are SAFE!!  Keep On Social Distancing and Stay Healthy";
             dis.setText( display );
@@ -140,10 +143,7 @@ public class Sympnext extends AppCompatActivity {
             String display="Your Symptoms shows that you have a high posiibility of being affected. Do Consult a Doctor and Keep On Social Distancing";
             dis.setText( display );
         }
-
-
         Log.d("From Symnext: ", "Gte Long and Lat here");
-
     }
 
     public void telephone(View view) {
