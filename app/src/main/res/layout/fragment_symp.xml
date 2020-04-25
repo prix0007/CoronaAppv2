@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#ffffff"
-    android:padding="4dp"
+
     android:layout_height="match_parent"
     tools:context=".ui.home.HomeFragment">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,7 +13,7 @@
 
         <TextView
             android:id="@+id/textView14"
-            android:layout_width="407dp"
+            android:layout_width="wrap_content"
             android:layout_height="39dp"
             android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-condensed-medium"
@@ -23,7 +23,6 @@
             android:textColor="#C036383A"
             android:textSize="25dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.709"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/block" />
 
