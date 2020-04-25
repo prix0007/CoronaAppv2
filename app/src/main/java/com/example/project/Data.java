@@ -56,7 +56,7 @@ public class Data extends AppCompatActivity {
                                 String symptoms = "";
                                 for(int i =0 ; i<7; ++i){
                                     if(sympmap.get(String.valueOf(i))!=null){
-                                        symptoms += sympmap.get(String.valueOf(i)) +" ";
+                                        symptoms += sympmap.get(String.valueOf(i)) +" ,";
                                     }
                                 }
                                 HashMap locmap = (HashMap) document.get("loc");

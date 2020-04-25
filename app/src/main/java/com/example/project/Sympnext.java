@@ -55,7 +55,7 @@ public class Sympnext extends AppCompatActivity {
         String[] user_symptoms;
         user_symptoms = (String[]) extra.get("sympdata");
         Map<String, Object> sympmap = new HashMap<>();
-        for(int i = 0; i<6; ++i){
+        for(int i = 0; i<7; ++i){
             sympmap.put(String.valueOf(i),user_symptoms[i]);
         }
 

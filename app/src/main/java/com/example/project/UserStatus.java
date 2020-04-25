@@ -34,7 +34,5 @@ public class UserStatus extends AppCompatActivity {
 
         ft.replace(R.id.stats_container, new Stats());
         ft.commit();
-
-
     }
 }

@@ -6,7 +6,7 @@
     android:background="#ffffff"
 
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".Sympcheck">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -27,7 +27,7 @@
             app:layout_constraintTop_toBottomOf="@+id/block" />
 
         <ImageView
-            android:id="@+id/none"
+            android:id="@+id/noneView"
             android:layout_width="120dp"
             android:layout_height="27dp"
             android:layout_marginStart="5dp"
@@ -44,7 +44,7 @@
             android:layout_marginTop="3dp"
             android:background="@drawable/ladyr"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/none" />
+            app:layout_constraintTop_toBottomOf="@+id/noneView" />
 
 
 
@@ -192,7 +192,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView14">
 
             <Button
-                android:id="@+id/head2"
+                android:id="@+id/none"
                 android:layout_width="wrap_content"
                 android:layout_height="27dp"
                 android:background="#FF0000"
@@ -209,7 +209,7 @@
                 android:background="#FF0000"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/parent"
-                app:layout_constraintTop_toBottomOf="@+id/head2" />
+                app:layout_constraintTop_toBottomOf="@+id/none" />
 
             <Button
                 android:id="@+id/fever"
