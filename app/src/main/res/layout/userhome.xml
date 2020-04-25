@@ -119,9 +119,9 @@
 
             <ImageView
                 android:id="@+id/usfo"
-                android:layout_width="256dp"
-                android:layout_height="179dp"
-                android:layout_marginTop="88dp"
+                android:layout_width="316dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/usfo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
