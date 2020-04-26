@@ -22,10 +22,8 @@ public class AuthorityHome extends AppCompatActivity {
     public void mc(View view){
         startActivity(new Intent(AuthorityHome.this, Map.class));
     }
-    public void co(View view){
-        startActivity(new Intent(AuthorityHome.this, Organizations.class));
-
-    }
+    public void co(View view){ startActivity(new Intent(AuthorityHome.this, Organizations.class));}
+    public void stat(View view){ startActivity(new Intent(AuthorityHome.this, AuthStatus.class));}
     public void signout(View view){
         firebaseAuth.signOut();
         finish();

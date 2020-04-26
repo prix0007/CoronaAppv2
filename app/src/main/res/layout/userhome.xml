@@ -87,7 +87,9 @@
                 android:id="@+id/signout"
                 android:layout_width="148dp"
                 android:layout_height="73dp"
-                android:layout_marginTop="272dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="24dp"
                 android:background="@drawable/buttonblue"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:text="@string/signout26"
@@ -95,10 +97,26 @@
                 android:textColor="#FFFFFF"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/preventioncontrol" />
+            <Button
+                android:id="@+id/del"
+                android:layout_width="148dp"
+                android:layout_height="73dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/buttpur"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:onClick="stat"
+                android:text="@string/del"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button333" />
 
             <Button
                 android:id="@+id/button333"
@@ -119,8 +137,8 @@
 
             <ImageView
                 android:id="@+id/usfo"
-                android:layout_width="316dp"
-                android:layout_height="260dp"
+                android:layout_width="351dp"
+                android:layout_height="270dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/usfo"
                 app:layout_constraintEnd_toEndOf="parent"

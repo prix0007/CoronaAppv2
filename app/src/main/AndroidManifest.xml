@@ -54,6 +54,7 @@
         <activity android:name=".AuthorityHome" />
         <activity android:name=".Data" />
         <activity android:name=".UserStatus" />
+        <activity android:name=".AuthStatus" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
