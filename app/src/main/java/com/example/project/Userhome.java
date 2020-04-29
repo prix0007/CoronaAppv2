@@ -7,6 +7,7 @@ import android.content.IntentSender;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -33,6 +34,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -48,7 +50,7 @@ public class Userhome extends AppCompatActivity {
 
 
 
-    private Button symptoms, mapcheck, preventioncontrol, signout, userName,stats_u;
+    private Button symptoms, mapcheck, preventioncontrol, signout, userName,stats_u, delete;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
 
@@ -90,28 +92,54 @@ public class Userhome extends AppCompatActivity {
 
 
 
-        stats_u.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), UserStatus.class);
-                startActivity(i);
-            }
+        stats_u.setOnClickListener(v -> {
+            Intent i = new Intent(getApplicationContext(), UserStatus.class);
+            startActivity(i);
         });
 
-        preventioncontrol.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent ph=new Intent(getApplicationContext(),Prevent.class);
-                startActivity(ph);
-            }
+        preventioncontrol.setOnClickListener(v -> {
+            Intent ph=new Intent(getApplicationContext(),Prevent.class);
+            startActivity(ph);
         });
 
-        signout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                firebaseAuth.signOut();
-                finish();
-            }
+        signout.setOnClickListener(v -> {
+            firebaseAuth.signOut();
+            finish();
+        });
+
+        delete.setOnClickListener(v -> {
+            AlertDialog.Builder dialog = new AlertDialog.Builder( Userhome.this);
+            dialog.setTitle("Attention !!");
+            dialog.setMessage("After this action your Account will be deleted from all CoWar services. Are you sure to continue?");
+            dialog.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    user.delete()
+                            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    if (task.isSuccessful()) {
+                                        Log.d("Delete account", "User account deleted.");
+                                        Toast.makeText(getApplicationContext(),"Account Deleted SuccessFully!!",Toast.LENGTH_LONG).show();
+                                        finish();
+                                    } else {
+                                        Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+                }
+            });
+            dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int which) {
+                         dialogInterface.dismiss();
+                }
+            });
+
+            AlertDialog alert = dialog.create();
+            alert.show();
         });
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
@@ -126,6 +154,7 @@ public class Userhome extends AppCompatActivity {
         signout = findViewById(R.id.signout);
         userName = findViewById(R.id.userName);
         stats_u= findViewById(R.id.button333);
+        delete = findViewById(R.id.del);
     }
 
     private void fetchLocation() {
@@ -140,6 +169,7 @@ public class Userhome extends AppCompatActivity {
 
                 //user denied [permission for 2nd 3rd time, then show him why you need it
 
+                //when user clicks cancel
                 new AlertDialog.Builder(this)
                 .setTitle("Required Location Permission")
                         .setMessage("You have to give permission in order to access this feature.")
@@ -152,13 +182,7 @@ public class Userhome extends AppCompatActivity {
                                         MY_PERMISSIONS_REQUEST_ACCESS_COURSE_LOCATION);
                             }
                         })
-                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                            //when user clicks cancel
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dialog.dismiss();
-                            }
-                        })
+                        .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
                         .create()
                         .show();
             } else {

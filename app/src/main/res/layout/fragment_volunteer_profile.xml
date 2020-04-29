@@ -45,6 +45,7 @@
                 android:textSize="23sp" />
 
             <Button
+                android:id="@+id/deleteVolunteer"
                 android:layout_width="148dp"
                 android:layout_height="73dp"
                 android:layout_gravity="center_horizontal"

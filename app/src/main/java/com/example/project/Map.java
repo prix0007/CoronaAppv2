@@ -136,33 +136,34 @@ public class Map extends FragmentActivity implements  OnMapReadyCallback {
                                 if (task.isSuccessful()) {
                                     for (QueryDocumentSnapshot document : task.getResult()) {
                                         HashMap locmap = (HashMap) document.get("loc");
-                                        Long severity = (Long) document.get("severity");
-                                        if(severity <= 4){
-                                            MarkerOptions mp = new MarkerOptions();
-                                            mp.position(new LatLng(Double.parseDouble(locmap.get("latitude").toString()), (Double) locmap.get("longitude")));
-                                            mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
-                                            mp.title(document.getString("name"));
-                                            mMap.addMarker(mp);
-                                        } else if( severity > 4 && severity < 9){
-                                            MarkerOptions mp = new MarkerOptions();
-                                            mp.position(new LatLng(Double.parseDouble(locmap.get("latitude").toString()), (Double) locmap.get("longitude")));
-                                            mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
-                                            mp.title(document.getString("name"));
-                                            mMap.addMarker(mp);
-                                        } else if(severity > 8 && severity <= 14){
-                                            MarkerOptions mp = new MarkerOptions();
-                                            mp.position(new LatLng(Double.parseDouble(locmap.get("latitude").toString()), (Double) locmap.get("longitude")));
-                                            mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
-                                            mp.title(document.getString("name"));
-                                            mMap.addMarker(mp);
-                                        } else {
-                                            MarkerOptions mp = new MarkerOptions();
-                                            mp.position(new LatLng(Double.parseDouble(locmap.get("latitude").toString()), (Double) locmap.get("longitude")));
-                                            mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
-                                            mp.title(document.getString("name"));
-                                            mMap.addMarker(mp);
+                                        if(document.get("severity") != null) {
+                                            Long severity = (Long) document.get("severity");
+                                            if (severity <= 4) {
+                                                MarkerOptions mp = new MarkerOptions();
+                                                mp.position(new LatLng(Double.parseDouble(locmap.get("latitude").toString()), (Double) locmap.get("longitude")));
+                                                mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+                                                mp.title(document.getString("name"));
+                                                mMap.addMarker(mp);
+                                            } else if (severity > 4 && severity < 9) {
+                                                MarkerOptions mp = new MarkerOptions();
+                                                mp.position(new LatLng(Double.parseDouble(locmap.get("latitude").toString()), (Double) locmap.get("longitude")));
+                                                mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
+                                                mp.title(document.getString("name"));
+                                                mMap.addMarker(mp);
+                                            } else if (severity > 8 && severity <= 14) {
+                                                MarkerOptions mp = new MarkerOptions();
+                                                mp.position(new LatLng(Double.parseDouble(locmap.get("latitude").toString()), (Double) locmap.get("longitude")));
+                                                mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_ORANGE));
+                                                mp.title(document.getString("name"));
+                                                mMap.addMarker(mp);
+                                            } else {
+                                                MarkerOptions mp = new MarkerOptions();
+                                                mp.position(new LatLng(Double.parseDouble(locmap.get("latitude").toString()), (Double) locmap.get("longitude")));
+                                                mp.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+                                                mp.title(document.getString("name"));
+                                                mMap.addMarker(mp);
+                                            }
                                         }
-
                                     }
                                 } else {
                                     Log.d(TAG, "Error getting documents: ", task.getException());
