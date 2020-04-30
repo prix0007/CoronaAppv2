@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Sympcheck extends AppCompatActivity {
+public class Sympcheck extends Activity {
 
     int total=0;
     String[] symptoms = new String[7];

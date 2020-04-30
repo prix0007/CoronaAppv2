@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 
@@ -37,7 +38,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends Activity {
 
     public static final String TAG = "RegisterActivityJava";
     EditText rname, rage, remail, rpass, workplace;
