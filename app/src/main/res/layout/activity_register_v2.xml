@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,7 +43,7 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/name1"
                 android:textColor="#0478FF"
-                android:textSize="25dp"/>
+                android:textSize="25sp"/>
 
             <EditText
                 android:id="@+id/name"
@@ -67,7 +67,7 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/em1"
                 android:textColor="#0478FF"
-                android:textSize="25dp"/>
+                android:textSize="25sp"/>
 
             <EditText
                 android:id="@+id/email"
@@ -91,7 +91,8 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/password1"
                 android:textColor="#0478FF"
-                android:textSize="25dp"/>
+                android:textSize="25sp"/>
+
 
             <EditText
                 android:id="@+id/password"
@@ -102,7 +103,7 @@
                 android:inputType="textPassword"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                />
+                android:importantForAutofill="no" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -115,7 +116,7 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/age00"
                 android:textColor="#0478FF"
-                android:textSize="25dp"/>
+                android:textSize="25sp"/>
 
             <EditText
                 android:id="@+id/age"
@@ -140,7 +141,7 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/role1"
                 android:textColor="#0478FF"
-                android:textSize="25dp"/>
+                android:textSize="25sp"/>
 
             <Spinner
                 android:id="@+id/roles"
@@ -164,7 +165,7 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/occupation1"
                 android:textColor="#0478FF"
-                android:textSize="25dp"/>
+                android:textSize="25sp"/>
 
            <Spinner
                android:id="@+id/occupation"
@@ -190,7 +191,7 @@
                 android:layout_marginStart="10dp"
                 android:text="@string/workplace0"
                 android:textColor="#0478FF"
-                android:textSize="25dp"/>
+                android:textSize="25sp"/>
 
             <EditText
                 android:id="@+id/workplace"
@@ -229,21 +230,23 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="78dp"
                 android:layout_marginRight="8dp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:layout_marginStart="16dp" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="390dp"
-            android:layout_height="305dp"
-            android:layout_gravity="center"
-            android:background="@drawable/nurse"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView4"-->
+<!--            android:layout_width="390dp"-->
+<!--            android:layout_height="305dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/nurse"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="1.0"-->
+<!--            android:contentDescription="@string/todo" />-->
     </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

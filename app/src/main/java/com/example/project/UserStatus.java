@@ -21,7 +21,8 @@ import java.util.Map;
 
 
 
-public class UserStatus extends AppCompatActivity {
+public class
+UserStatus extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
