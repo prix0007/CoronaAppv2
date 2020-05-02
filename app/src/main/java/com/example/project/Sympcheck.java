@@ -2,161 +2,36 @@ package com.example.project;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import static com.google.common.base.Ascii.FF;
+
 public class Sympcheck extends Activity {
 
     int total=0;
     String[] symptoms = new String[7];
-    Button none;
+
     Integer[] checkFlag = { 0 , 0 , 0 , 0 , 0 , 0 };
+
+    //CheckBox Initialization
+    CheckBox nC,f,h,c,b,d,s; //nC=none | fC=fever | hC=headache | cC=cough | bC=breath | dC=diarrhea | sC=shaking chills
+
+
+
 
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate( savedInstanceState );
         setContentView( R.layout.fragment_symp );
-
-        none = findViewById(R.id.none); // this is none
-
-        final Button f = findViewById( R.id.fever );
-        f.setOnClickListener(view -> {
-            resetNone(1);
-
-            //Calling function to check if already tick
-            if(checkActive(1)){
-                Toast.makeText(this, "Already Checked!",Toast.LENGTH_SHORT).show();
-                return;
-            }
-            total = total + 3;
-            status(total);
-            System.out.println( total );
-            f.setBackgroundColor(getResources().getColor(R.color.change));
-            none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            symptoms[1] = "Fever";
-            checkFlag[1] = 1;
-        });
-
-        final Button c = findViewById( R.id.cough );
-        c.setOnClickListener(view -> {
-            resetNone(1);
-            //Calling function to check if already tick
-            if(checkActive(2)){
-                Toast.makeText(this, "Already Checked!",Toast.LENGTH_SHORT).show();
-                return;
-            }
-            total = total + 2;
-            status(total);
-            System.out.println( total );
-            c.setBackgroundColor(getResources().getColor(R.color.change));
-            none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            symptoms[2] = "Cough";
-            checkFlag[2] = 1;
-
-        });
-
-        final Button b= findViewById( R.id.breath );
-        b.setOnClickListener(view -> {
-            resetNone(1);
-
-            //Calling function to check if already tick
-            if(checkActive(3)){
-                Toast.makeText(this, "Already Checked!",Toast.LENGTH_SHORT).show();
-                return;
-            }
-            total = total + 8;
-            status(total);
-            System.out.println( total );
-            b.setBackgroundColor(getResources().getColor(R.color.change));
-            none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            symptoms[3] = "Shortness of Breath";
-            checkFlag[3] = 1;
-
-        });
-
-        final Button s= findViewById( R.id.shaking );
-        s.setOnClickListener(view -> {
-            resetNone(1);
-
-            //Calling function to check if already tick
-            if(checkActive(4)){
-                Toast.makeText(this, "Already Checked!",Toast.LENGTH_SHORT).show();
-                return;
-            }
-            total = total + 2;
-            status(total);
-            System.out.println( total );
-            s.setBackgroundColor(getResources().getColor(R.color.change));
-            none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            symptoms[4] = "Shaking Chills";
-            checkFlag[4] = 1;
-        });
-
-        final Button d = findViewById( R.id.dir );
-        d.setOnClickListener(view -> {
-            resetNone(1);
-
-            //Calling function to check if already tick
-            if(checkActive(5)){
-                Toast.makeText(this, "Already Checked!",Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            total = total + 2;
-            status(total);
-            System.out.println( total );
-            d.setBackgroundColor(getResources().getColor(R.color.change));
-            none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            symptoms[5] = "Diarrhea";
-            checkFlag[5] = 1;
-        });
-
-        final Button h = findViewById( R.id.head );
-        h.setOnClickListener(view -> {
-            //Calling Function to untick none
-            resetNone(1);
-
-            //Calling function to check if already tick
-            if(checkActive(0)){
-                Toast.makeText(this, "Already Checked!",Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            total = total + 2;
-            status(total);
-            System.out.println( total );
-            h.setBackgroundColor(getResources().getColor(R.color.change));
-            none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            symptoms[0] = "Headache & Sore Throat";
-            checkFlag[0] = 1;
-        });
-
-
-        none.setOnClickListener(view -> {
-
-            total = 1;
-            status(total);
-
-            none.setBackgroundColor(getResources().getColor(R.color.change));
-
-            f.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            b.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            s.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            d.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            h.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            c.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-
-            resetSymptoms();
-            symptoms[6] = "Safe";
-            resetCheckFlag();
-
-        });
 
         //Code to reset all fields
         final TextView r = findViewById( R.id.textView20);
@@ -172,20 +47,20 @@ public class Sympcheck extends Activity {
             notsafe.setVisibility(View.INVISIBLE);
             ImageView danger= findViewById(R.id.danger);
             danger.setVisibility(View.INVISIBLE);
-            f.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            b.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            s.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            d.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            h.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            c.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-            none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+            f.setChecked(false);
+            b.setChecked(false);
+            s.setChecked(false);
+            d.setChecked(false);
+            h.setChecked(false);
+            c.setChecked(false);
+            nC.setChecked(false);
             total=0;
             resetSymptoms();
             resetCheckFlag();
         });
 
         //Code to send the Symptom checkup data to next stage
-        final TextView check = (TextView) findViewById( R.id.textView27);
+        final TextView check = findViewById( R.id.textView27);
         check.setOnClickListener(view -> {
             if(total>1){
                 Intent intent = new Intent(getApplicationContext(), Sympnext.class);
@@ -206,6 +81,119 @@ public class Sympcheck extends Activity {
             }
         });
     }
+
+    public void onCheckBoxes(View view)
+    {
+        nC = findViewById(R.id.noneC); // this is none
+        f = findViewById(R.id.feverC);
+        c = findViewById(R.id.coughC);
+        b = findViewById(R.id.breathC);
+        s = findViewById(R.id.chillsC);
+        d = findViewById(R.id.dirC);
+        h = findViewById(R.id.headC);
+
+
+        if (nC.isChecked()) {
+            total = 1;
+            status(total);
+            f.setChecked(false);
+            b.setChecked(false);
+            s.setChecked(false);
+            d.setChecked(false);
+            h.setChecked(false);
+            c.setChecked(false);
+
+            resetSymptoms();
+            symptoms[6] = "Safe";
+            resetCheckFlag();
+        }
+
+        if (f.isChecked()) {
+            resetNone();
+
+            total = total + 3;
+            status(total);
+            System.out.println(total);
+
+            symptoms[1] = "Fever";
+            checkFlag[1] = 1;
+        }
+
+
+        if (c.isChecked()) {
+            resetNone();
+
+
+            total = total + 2;
+            status(total);
+            System.out.println(total);
+
+
+            symptoms[2] = "Cough";
+            checkFlag[2] = 1;
+
+        }
+
+
+        if (b.isChecked()) {
+            resetNone();
+
+
+            total = total + 8;
+            status(total);
+            System.out.println(total);
+
+
+            symptoms[3] = "Shortness of Breath";
+            checkFlag[3] = 1;
+
+        }
+
+
+        if (s.isChecked()) {
+            resetNone();
+
+
+            total = total + 2;
+            status(total);
+            System.out.println(total);
+
+            symptoms[4] = "Shaking Chills";
+            checkFlag[4] = 1;
+        }
+
+
+        if (d.isChecked()) {
+            resetNone();
+
+
+            total = total + 2;
+            status(total);
+            System.out.println(total);
+
+            symptoms[5] = "Diarrhea";
+            checkFlag[5] = 1;
+        }
+
+
+        if (h.isChecked()) {
+            //Calling Function to untick none
+            resetNone();
+
+
+            total = total + 2;
+            status(total);
+            System.out.println(total);
+
+            symptoms[0] = "Headache & Sore Throat";
+            checkFlag[0] = 1;
+        }
+    }
+
+
+
+
+
         private void status(int tot){
             ImageView ques = findViewById(R.id.question);
             ImageView safe= findViewById(R.id.safe);
@@ -261,11 +249,11 @@ public class Sympcheck extends Activity {
                 symptoms[i] = "";
             }
         }
-        private void resetNone(int flag){
-                if(flag == 1){
-                    none.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+        private void resetNone(){
+
+                    nC.setChecked(false);
                     symptoms[6] = "";
-                }
+
         }
         private void resetCheckFlag(){
             for(int i =0 ;i<6; ++i){

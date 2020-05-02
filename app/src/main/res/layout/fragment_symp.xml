@@ -7,9 +7,131 @@
 
     android:layout_height="match_parent"
     tools:context=".Sympcheck">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ladyl"
+            android:layout_width="129dp"
+            android:layout_height="177dp"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="144dp"
+            android:layout_marginBottom="643dp"
+            android:background="@drawable/ladyl"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="255dp"
+            android:layout_height="371dp"
+            android:layout_marginStart="81dp"
+            android:layout_marginTop="275dp"
+            android:layout_marginEnd="81dp"
+            android:layout_marginBottom="299dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <CheckBox
+                android:id="@+id/noneC"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/colorAccent1"
+                android:buttonTint="#000000"
+                android:onClick="onCheckBoxes"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingStart="20sp"
+                android:text="None"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/chillsC"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/colorAccent1"
+                android:buttonTint="#040303"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingStart="20sp"
+                android:onClick="onCheckBoxes"
+                android:text="Shaking Chills"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/breathC"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/colorAccent1"
+                android:buttonTint="#090909"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingStart="20sp"
+                android:onClick="onCheckBoxes"
+                android:text="Shortness of Breath"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/dirC"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@color/colorAccent1"
+                android:buttonTint="#050505"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingStart="20sp"
+                android:text="Diarrhea"
+                android:onClick="onCheckBoxes"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/feverC"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="@color/colorAccent1"
+                android:buttonTint="#050505"
+                android:fontFamily="sans-serif-condensed"
+                android:onClick="onCheckBoxes"
+                android:paddingStart="20sp"
+                android:text="Fever"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/coughC"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/colorAccent1"
+                android:buttonTint="#070707"
+                android:onClick="onCheckBoxes"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingStart="20sp"
+                android:text="Cough"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <CheckBox
+                android:id="@+id/headC"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/colorAccent1"
+                android:buttonTint="#040303"
+                android:onClick="onCheckBoxes"
+                android:fontFamily="sans-serif-condensed"
+                android:paddingStart="20sp"
+                android:text="Headache and Sore Throat"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView14"
@@ -26,42 +148,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/block" />
 
-        <ImageView
-            android:id="@+id/noneView"
-            android:layout_width="120dp"
-            android:layout_height="27dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="67dp"
-            android:background="@drawable/none"
-            app:layout_constraintStart_toStartOf="@+id/ladyr"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         <ImageView
-            android:id="@+id/ladyr"
-            android:layout_width="130dp"
-            android:layout_height="216dp"
-            android:layout_marginTop="3dp"
-            android:background="@drawable/ladyr"
+            android:id="@+id/block"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="9dp"
+            android:layout_marginRight="9dp"
+            android:background="@drawable/block"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/noneView" />
-
-
-
-        <ImageView
-        android:id="@+id/block"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:background="@drawable/block"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/next"
@@ -78,82 +179,82 @@
             app:layout_constraintStart_toStartOf="@+id/block"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <ImageView
-            android:id="@+id/ladyl"
-            android:layout_width="222dp"
-            android:layout_height="318dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/ladyl"
+            android:id="@+id/safe"
+            android:layout_width="419dp"
+            android:layout_height="419dp"
+            android:layout_marginTop="525dp"
+            android:background="@drawable/safe"
+
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-        android:id="@+id/safe"
-        android:layout_width="419dp"
-        android:layout_height="419dp"
-        android:layout_marginTop="148dp"
-        android:background="@drawable/safe"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            android:id="@+id/danger"
+            android:layout_width="419dp"
+            android:layout_height="419dp"
+            android:layout_marginTop="525dp"
+            android:background="@drawable/danger"
 
-    <ImageView
-        android:id="@+id/danger"
-        android:layout_width="419dp"
-        android:layout_height="419dp"
-        android:layout_marginTop="148dp"
-        android:background="@drawable/danger"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
 
-    <ImageView
-        android:id="@+id/notsafe"
-        android:layout_width="419dp"
-        android:layout_height="419dp"
-        android:layout_marginTop="148dp"
-        android:background="@drawable/notsafe"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/onverge"
-        android:layout_width="419dp"
-        android:layout_height="419dp"
-        android:layout_marginTop="148dp"
-        android:background="@drawable/onverge"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+        <ImageView
+            android:id="@+id/notsafe"
+            android:layout_width="419dp"
+            android:layout_height="419dp"
+            android:layout_marginTop="526dp"
+            android:background="@drawable/notsafe"
 
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
 
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <ImageView
+            android:id="@+id/onverge"
+            android:layout_width="419dp"
+            android:layout_height="419dp"
+            android:layout_marginTop="526dp"
+            android:background="@drawable/onverge"
+
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/question"
-            android:layout_width="419dp"
-            android:layout_height="419dp"
-            android:layout_marginTop="146dp"
+            android:layout_width="411dp"
+            android:layout_height="407dp"
+            android:layout_marginTop="525dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="13dp"
             android:background="@drawable/question"
             android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14" />
-
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView27"
             android:layout_width="137dp"
             android:layout_height="45dp"
-            android:layout_marginStart="36dp"
-            android:layout_marginLeft="36dp"
 
-            android:layout_marginTop="6dp"
+            android:layout_marginStart="43dp"
+            android:layout_marginTop="679dp"
+            android:layout_marginEnd="237dp"
+            android:layout_marginBottom="221dp"
             android:background="@drawable/butt3"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center
@@ -161,17 +262,20 @@
             android:text="@string/continue15"
             android:textColor="#ffffff"
             android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView20"
             android:layout_width="137dp"
             android:layout_height="45dp"
 
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="36dp"
-            android:layout_marginRight="36dp"
+            android:layout_marginStart="236dp"
+            android:layout_marginTop="679dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginBottom="221dp"
             android:background="@drawable/butt2"
             android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center
@@ -179,86 +283,10 @@
             android:text="@string/reset15"
             android:textColor="#ffffff"
             android:textSize="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout9" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/linearLayout9"
-            android:layout_width="15dp"
-            android:layout_height="251dp"
-            android:layout_marginTop="67dp"
-            app:layout_constraintEnd_toStartOf="@+id/ladyr"
-            app:layout_constraintStart_toEndOf="@+id/ladyl"
-            app:layout_constraintTop_toBottomOf="@+id/textView14">
-
-            <Button
-                android:id="@+id/none"
-                android:layout_width="wrap_content"
-                android:layout_height="27dp"
-                android:background="#FF0000"
-
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/head"
-                android:layout_width="wrap_content"
-                android:layout_height="27dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF0000"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/parent"
-                app:layout_constraintTop_toBottomOf="@+id/none" />
-
-            <Button
-                android:id="@+id/fever"
-                android:layout_width="wrap_content"
-                android:layout_height="27dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF0000"
-                app:layout_constraintStart_toEndOf="@+id/parent"
-                app:layout_constraintTop_toBottomOf="@+id/head" />
-
-            <Button
-                android:id="@+id/cough"
-                android:layout_width="wrap_content"
-                android:layout_height="27dp"
-
-                android:layout_marginTop="8dp"
-                android:background="#FF0000"
-                app:layout_constraintStart_toEndOf="@+id/parent"
-                app:layout_constraintTop_toBottomOf="@+id/fever" />
-
-            <Button
-                android:id="@+id/breath"
-                android:layout_width="wrap_content"
-                android:layout_height="27dp"
-                android:layout_marginTop="12dp"
-                android:background="#FF0000"
-                app:layout_constraintStart_toEndOf="@+id/parent"
-                app:layout_constraintTop_toBottomOf="@+id/cough" />
-
-            <Button
-                android:id="@+id/shaking"
-                android:layout_width="wrap_content"
-                android:layout_height="27dp"
-                android:layout_marginTop="8dp"
-                android:background="#FF0000"
-                app:layout_constraintStart_toEndOf="@+id/parent"
-                app:layout_constraintTop_toBottomOf="@+id/breath" />
-
-            <Button
-                android:id="@+id/dir"
-                android:layout_width="wrap_content"
-                android:layout_height="27dp"
-                android:layout_marginTop="10dp"
-                android:background="#FF0000"
-                app:layout_constraintStart_toEndOf="@+id/parent"
-                app:layout_constraintTop_toBottomOf="@+id/shaking"
-                tools:ignore="UnknownId" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
