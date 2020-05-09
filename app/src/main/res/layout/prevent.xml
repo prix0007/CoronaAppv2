@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#ffffff"
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+
 
     <ImageView
         android:id="@+id/imageView6"
@@ -35,12 +35,27 @@
         android:onClick="user_nav"
         android:text="@string/prevention24"
         android:textColor="#ffffff"
-        android:textSize="65dp"
+        android:textSize="56dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <ImageView-->
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_vertical"
+
+        android:lineSpacingExtra="18sp"
+        android:text="@string/prev_measures"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="25sp"
+        tools:layout_editor_absoluteX="176dp"
+        tools:layout_editor_absoluteY="203dp" />
+
+    <!--    <ImageView-->
 <!--        android:id="@+id/usfo"-->
 <!--        android:layout_width="wrap_content"-->
 <!--        android:layout_height="wrap_content"-->
@@ -50,4 +65,3 @@
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/imageView6" />-->
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>

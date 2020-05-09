@@ -18,6 +18,7 @@
 
     <application
         android:allowBackup="true"
+        android:largeHeap="true"
         android:hardwareAccelerated="false"
         android:icon="@drawable/fin_round"
         android:label="@string/app_name"

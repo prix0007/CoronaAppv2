@@ -99,7 +99,7 @@
                     android:id="@+id/linearLayout7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="20dp"
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="8dp"
                     android:orientation="vertical"
@@ -114,9 +114,10 @@
                         android:gravity="center_horizontal"
                         android:text="@string/confirmed_indian_cases18"
                         android:textAlignment="center"
+                        android:textSize="12sp"
                         tools:layout_conversion_absoluteHeight="37dp"
                         tools:layout_conversion_absoluteWidth="107dp"
-                        tools:layout_editor_absoluteX="46dp"
+
                         tools:layout_editor_absoluteY="213dp" />
 
                     <TextView
@@ -141,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginEnd="20dp"
                     android:layout_marginRight="24dp"
                     android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -153,6 +154,8 @@
                         android:gravity="center_horizontal"
                         android:text="@string/confirmed_forgein_cases18"
                         android:textAlignment="center"
+                        android:textSize="12sp"
+
                         tools:layout_conversion_absoluteHeight="37dp"
                         tools:layout_conversion_absoluteWidth="107dp"
                         tools:layout_editor_absoluteX="46dp"
