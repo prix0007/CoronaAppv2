@@ -26,18 +26,15 @@ public class Sympcheck extends Activity {
     CheckBox nC,f,h,c,b,d,s; //nC=none | fC=fever | hC=headache | cC=cough | bC=breath | dC=diarrhea | sC=shaking chills
 
 
-
-
     protected void onCreate(Bundle savedInstanceState) {
-
-        super.onCreate( savedInstanceState );
-        setContentView( R.layout.fragment_symp );
+        super.onCreate(savedInstanceState);
+        setContentView( R.layout.fragment_symp);
 
         //Code to reset all fields
         final TextView r = findViewById( R.id.textView20);
 
-        r.setOnClickListener(view -> {
-            ImageView ques= findViewById(R.id.question);
+        r.setOnClickListener(v -> {
+           /* ImageView ques= findViewById(R.id.question);
             ques.setVisibility(View.VISIBLE);
             ImageView safe= findViewById(R.id.safe);
             safe.setVisibility(View.INVISIBLE);
@@ -46,13 +43,8 @@ public class Sympcheck extends Activity {
             ImageView notsafe= findViewById(R.id.notsafe);
             notsafe.setVisibility(View.INVISIBLE);
             ImageView danger= findViewById(R.id.danger);
-            danger.setVisibility(View.INVISIBLE);
-            f.setChecked(false);
-            b.setChecked(false);
-            s.setChecked(false);
-            d.setChecked(false);
-            h.setChecked(false);
-            c.setChecked(false);
+            danger.setVisibility(View.INVISIBLE);*/
+            uncheckAll();
             nC.setChecked(false);
             total=0;
             resetSymptoms();
@@ -95,13 +87,8 @@ public class Sympcheck extends Activity {
 
         if (nC.isChecked()) {
             total = 1;
-            status(total);
-            f.setChecked(false);
-            b.setChecked(false);
-            s.setChecked(false);
-            d.setChecked(false);
-            h.setChecked(false);
-            c.setChecked(false);
+            //status(total);
+            uncheckAll();
 
             resetSymptoms();
             symptoms[6] = "Safe";
@@ -112,7 +99,7 @@ public class Sympcheck extends Activity {
             resetNone();
 
             total = total + 3;
-            status(total);
+            //status(total);
             System.out.println(total);
 
             symptoms[1] = "Fever";
@@ -125,7 +112,7 @@ public class Sympcheck extends Activity {
 
 
             total = total + 2;
-            status(total);
+            //status(total);
             System.out.println(total);
 
 
@@ -140,7 +127,7 @@ public class Sympcheck extends Activity {
 
 
             total = total + 8;
-            status(total);
+            //status(total);
             System.out.println(total);
 
 
@@ -155,7 +142,7 @@ public class Sympcheck extends Activity {
 
 
             total = total + 2;
-            status(total);
+            //status(total);
             System.out.println(total);
 
             symptoms[4] = "Shaking Chills";
@@ -168,7 +155,7 @@ public class Sympcheck extends Activity {
 
 
             total = total + 2;
-            status(total);
+            //status(total);
             System.out.println(total);
 
             symptoms[5] = "Diarrhea";
@@ -182,7 +169,7 @@ public class Sympcheck extends Activity {
 
 
             total = total + 2;
-            status(total);
+            //status(total);
             System.out.println(total);
 
             symptoms[0] = "Headache & Sore Throat";
@@ -194,7 +181,7 @@ public class Sympcheck extends Activity {
 
 
 
-        private void status(int tot){
+    /*    private void status(int tot){
             ImageView ques = findViewById(R.id.question);
             ImageView safe= findViewById(R.id.safe);
             ImageView onverge= findViewById(R.id.onverge);
@@ -243,7 +230,8 @@ public class Sympcheck extends Activity {
                 notsafe.setVisibility(View.INVISIBLE);
                 danger.setVisibility(View.INVISIBLE);
             }
-        }
+        }*/
+
         private void resetSymptoms(){
             for(int i =0 ;i<6; ++i){
                 symptoms[i] = "";
@@ -255,6 +243,16 @@ public class Sympcheck extends Activity {
                     symptoms[6] = "";
 
         }
+
+        private void uncheckAll(){
+            f.setChecked(false);
+            b.setChecked(false);
+            s.setChecked(false);
+            d.setChecked(false);
+            h.setChecked(false);
+            c.setChecked(false);
+        }
+
         private void resetCheckFlag(){
             for(int i =0 ;i<6; ++i){
                 checkFlag[i] = 0;
