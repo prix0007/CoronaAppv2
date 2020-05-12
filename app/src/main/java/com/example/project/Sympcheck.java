@@ -243,7 +243,6 @@ public class Sympcheck extends Activity {
 //                notsafe.setVisibility(View.INVISIBLE);
 //                danger.setVisibility(View.INVISIBLE);
 //            }
-//        }
         private void resetSymptoms(){
             for(int i =0 ;i<6; ++i){
                 symptoms[i] = "";

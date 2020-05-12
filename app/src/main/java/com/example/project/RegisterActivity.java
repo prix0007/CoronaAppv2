@@ -42,7 +42,7 @@ public class RegisterActivity extends Activity {
 
     public static final String TAG = "RegisterActivityJava";
     EditText rname, rage, remail, rpass, workplace;
-    EditText rphone;
+//    EditText rphone;
     FirebaseAuth firebaseAuth;
     FirebaseFirestore firebaseFirestore;
     String userid;
@@ -62,26 +62,26 @@ public class RegisterActivity extends Activity {
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
 
-        Log.d(TAG, "Current Item is "+role.getSelectedItem());
+//        Log.d(TAG, "Current Item is "+role.getSelectedItem());
         final String[] roles = getResources().getStringArray(R.array.roles);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, roles);
-        role.setAdapter(adapter);
-          role.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-          @Override
-          public void onItemSelected(AdapterView<?> arg0, View arg1,
-              int arg2, long arg3) {
-            int index = arg0.getSelectedItemPosition();
-            if(roles[index].equals("Authority")){
-                viewOccupationView();
-            } else {
-                hideOccupationView();
-            }
-          }
-
-          @Override
-          public void onNothingSelected(AdapterView<?> arg0) {
-          }
-        });
+//        role.setAdapter(adapter);
+//          role.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//          @Override
+//          public void onItemSelected(AdapterView<?> arg0, View arg1,
+//              int arg2, long arg3) {
+//            int index = arg0.getSelectedItemPosition();
+//            if(roles[index].equals("Authority")){
+//                viewOccupationView();
+//            } else {
+//                hideOccupationView();
+//            }
+//          }
+//
+//          @Override
+//          public void onNothingSelected(AdapterView<?> arg0) {
+//          }
+//        });
 
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +90,7 @@ public class RegisterActivity extends Activity {
                 final String age = rage.getText().toString();
                 final String email = remail.getText().toString().trim();
                 final String password = rpass.getText().toString().trim();
-                final String srole = role.getSelectedItem().toString();
+                final String srole = "User";
                 String soccu = null;
                 String sworkPlace = null;
                 if(srole.equals("Authority")){
@@ -170,7 +170,7 @@ public class RegisterActivity extends Activity {
             rpass = findViewById(R.id.password);
             workplace = findViewById(R.id.workplace);
             occupation = findViewById(R.id.occupation);
-            role = findViewById(R.id.roles);
+//            role = findViewById(R.id.roles);
             progressBar = findViewById(R.id.progressBarRegister);
             occupation_layout = findViewById(R.id.occupation_layout);
             workplace_layout = findViewById(R.id.workplace_layout);
@@ -229,7 +229,7 @@ public class RegisterActivity extends Activity {
             rage.setText("");
             remail.setText("");
             rpass.setText("");
-            role.setSelection(0);
+//            role.setSelection(0);
             occupation.setSelection(0);
             workplace.setText("");
         }
